@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Slider from '../components/Slider'
 
 export default function Home ({handleToggle}){
     return(<>
@@ -8,9 +7,13 @@ export default function Home ({handleToggle}){
         <div className="flex sm:flex-col sm:justify-center sm:items-center py-5 sm:py-52">
         <div className="px-10">
            <h1 className="text-3xl font-bold ">I am Pratik Dev Das</h1>
+           <div>
            I am constantly making web apps to improve my skills and Porfolio. I 
             even convert UI in to CSS .
-          <a className="bg-black text-white rounded" href="">📜Resume</a>
+             </div> 
+          <div>
+          <a className="bg-black text-white rounded" href="https://drive.google.com/file/d/1hVokppZkgJxDm6xqwOBThCWa6VoLBKOy/view?usp=sharing">📜Resume</a>
+          </div>
         </div>
    
       </div>
@@ -19,12 +22,11 @@ export default function Home ({handleToggle}){
           <Image
            src="/images/left.png"
            alt="Picture of the author"
-          width={200}
-           height={200}
+          width={250}
+           height={250}
     />
           </div>
         </div>
       </div>
-      <Slider/>
     </>)
 }

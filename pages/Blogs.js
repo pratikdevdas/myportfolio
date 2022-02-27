@@ -1,9 +1,9 @@
-import Slider from '../components/Slider'
 
 const Blogs = () => {
   return (
-    <div>Blogs
-        <Slider/>
+    <div>
+      <div className="text-3xl pl-10">Blogs</div>
+      
     </div>
   )
 }
