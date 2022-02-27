@@ -1,10 +1,9 @@
 import Image from 'next/image'
 
 export default function Home ({handleToggle}){
-    return(<>
-
-      <div className="grid sm:grid-cols-2 gap-4 h-480 py-5 sm:py-0">
-        <div className="flex sm:flex-col sm:justify-center sm:items-center py-5 sm:py-52">
+    return(
+      <div className="grid sm:grid-cols-2 sm:grid-rows-1 justify-center gap-4  sm:py">
+        <div className="flex sm:flex-col sm:justify-center sm:items-center py-5 ">
         <div className="px-10">
            <h1 className="text-3xl font-bold ">I am Pratik Dev Das</h1>
            <div>
@@ -28,5 +27,5 @@ export default function Home ({handleToggle}){
           </div>
         </div>
       </div>
-    </>)
+    )
 }

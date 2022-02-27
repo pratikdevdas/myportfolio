@@ -2,9 +2,9 @@ import Image from "next/image";
 
 function Footer() {
   return (
-        <div className='border-t-2 border-black relative sm:mt-24'>
+        <div className='border-t-2 border-black relative'>
             <div className='flex justify-center'>
-                    <div className=' mt-3 w-20 h-6 bg-black rounded-md text-center text-white'>
+                    <div className='my-3 w-20 h-6  text-center '>
                         Lets Connect
                    </div> 
             </div>
