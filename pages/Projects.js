@@ -51,7 +51,7 @@ const Projects = () => {
             </div>
           </div> 
           
-          <div className="flex justify-center pt-8 pb-24 border-b-2"><a href="">view more...</a> </div>
+          <div className="flex justify-center pt-8 pb-24 "><a href="">view more...</a> </div>
       </div>
       </div>
 
