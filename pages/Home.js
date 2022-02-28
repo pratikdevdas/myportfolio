@@ -7,7 +7,7 @@ export default function Home ({handleToggle}){
         <div className="px-10">
            <h1 className="text-3xl font-bold ">I am Pratik Dev Das</h1>
            <div>
-           I am constantly making web apps to improve my skills and Porfolio. I 
+           I am constantly making web apps to improve my skills and Portfolio. I 
             even convert UI in to CSS .
              </div> 
           <div>

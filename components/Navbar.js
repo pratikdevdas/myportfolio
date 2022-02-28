@@ -5,14 +5,14 @@ import React,{ useState } from "react";
 
 function Navbar() {
   const {theme, setTheme} = useTheme()
-  const [toggle,setToggle] = useState('toggle mode')
-  
-  const handleClick = (event) =>{
-  
-    event.preventDefault()
-      setToggle(toggle === 'dark mode' ? 'light mode' : 'dark mode')
+  const [toggle,setToggle] = useState('dark')
+ 
+
+  function toggleChange(){
     setTheme(theme === 'dark' ? 'light' : 'dark')
+    setToggle(toggle === 'light' ? 'dark' : 'light' )
   }
+
   return (
     <div>
       <nav className="bg-white dark:bg-pblack">
@@ -23,8 +23,8 @@ function Navbar() {
               aria-label="Toggle Dark Mode"
               type="button"
               className="p-3 h-12 w-12 order-2 md:order-3"
-               onClick={handleClick}
-                >{toggle}</button></div>
+               onClick={toggleChange}
+                >{toggle} mode</button></div>
           </div>
       </nav>
 
