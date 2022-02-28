@@ -39,19 +39,19 @@ export default function Middle(){
         <div>
           <nav className="relative rounded-md shadow-sm -space-x-px" aria-label="Pagination">
             <button
-              className="z-10 bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex rounded-l-md items-center px-4 py-2 border text-sm font-medium"
+              className="z-10 bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex rounded-l-md items-center px-4 py-2 border text-sm font-medium hover:underline"
               onClick={handleToggle}
             >
               Home
             </button>
             <button
-              className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+              className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium hover:underline"
               onClick={handleToggle2}
             >
               Projects
             </button>
             <button
-              className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 rounded-r-md md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
+              className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 rounded-r-md md:inline-flex relative items-center px-4 py-2 border text-sm font-medium hover:underline"
               onClick={handleToggle3}
             >
               Blogs
