@@ -11,7 +11,7 @@ export default function Home ({handleToggle}){
             even convert UI in to CSS .
              </div> 
           <div>
-          <a className="bg-black text-white rounded" href="https://drive.google.com/file/d/1hVokppZkgJxDm6xqwOBThCWa6VoLBKOy/view?usp=sharing">📜Resume</a>
+          <a className="bg-black text-white rounded" href="https://drive.google.com/file/d/1PZtrIWwwBL6ynQyBHCouoRsF5TQfuQ7Q/view?usp=sharing">📜Resume</a>
           </div>
         </div>
    
