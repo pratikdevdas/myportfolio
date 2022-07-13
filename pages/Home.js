@@ -11,7 +11,7 @@ export default function Home ({handleToggle}){
             even convert UI in to CSS .
              </div> 
           <div>
-          <a className="bg-black  mt-5 text-white rounded hover:underline border-2" href="https://drive.google.com/file/d/1PZtrIWwwBL6ynQyBHCouoRsF5TQfuQ7Q/view?usp=sharing">📜 Click here for Resume</a>
+          <a className="bg-black  mt-5 text-white rounded hover:underline border-2" href="https://www.canva.com/design/DAEY8SLNWmA/N5vsp1M2lJ5HCrMQC2cL_g/view?utm_content=DAEY8SLNWmA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">📜 Click here for Resume</a>
           </div>
         </div>
    
