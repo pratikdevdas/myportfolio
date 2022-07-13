@@ -1,58 +1,29 @@
 import Link from "next/link"
+import project from './api/data.js'
 const Projects = () => {
+
   return (
       <div>
     <div className="text-3xl pl-10">Projects</div>
     <div>
 
-      <div className="flex flex-col justify-between pt-10 items-stretch">
+    {
+      project.map((info)=>
+      <div key={info.key} className="flex flex-col justify-between pt-5 items-stretch">
         <div className="flex justify-between  py-4 border-black">
-        <div className="grow sm:ml-36">Google Contact Clone</div> 
-        <div><a href="https://github.com/pratikdevdas/frontendphonebook" className="bg-black border-black sm:border-2 text-white sm:py-2 sm:px-4 rounded-xl mr-8 sm:mr-8">View Code</a></div>
-        <div ><Link href="/projects/Upcoming">
-            <a className="bg-white box-border border-black border-2 text-black sm:py-2 sm:px-4 rounded-xl sm:mr-28">Details</a>
+        <div className="grow sm:ml-36">{info.title}</div> 
+        <div><a href={info.github} className="bg-black border-black sm:border-2 text-white sm:py-2 sm:px-4 rounded-xl mr-8 sm:mr-8">View Code</a></div>
+        <div ><Link href={info.redirect}>
+            <a className="bg-white box-border border-black border-2 text-black sm:py-2 sm:px-4 rounded-xl sm:mr-28">View Live</a>
             </Link>
             </div>
           </div> 
-
-          <div className="flex justify-between border-t-2 py-4 border-black">
-        <div className="grow sm:ml-36">Google Contact Clone</div> 
-        <div><a href="https://github.com/pratikdevdas/frontendphonebook" className="bg-black border-black sm:border-2 text-white sm:py-2 sm:px-4 rounded-xl mr-8 sm:mr-8">View Code</a></div>
-        <div ><Link href="/projects/Upcoming">
-            <a className="bg-white box-border border-black border-2 text-black sm:py-2 sm:px-4 rounded-xl sm:mr-28">Details</a>
-            </Link>
-            </div>
-          </div> 
-
-          <div className="flex justify-between border-t-2 py-4 border-black">
-        <div className="grow sm:ml-36">Google Contact Clone</div> 
-        <div><a href="https://github.com/pratikdevdas/frontendphonebook" className="bg-black border-black sm:border-2 text-white sm:py-2 sm:px-4 rounded-xl mr-8 sm:mr-8">View Code</a></div>
-        <div ><Link href="/projects/Upcoming">
-            <a className="bg-white box-border border-black border-2 text-black sm:py-2 sm:px-4 rounded-xl sm:mr-28">Details</a>
-            </Link>
-            </div>
-          </div> 
-
-          <div className="flex justify-between border-t-2 py-4 border-black">
-        <div className="grow sm:ml-36">Google Contact Clone</div> 
-        <div><a href="https://github.com/pratikdevdas/frontendphonebook" className="bg-black border-black sm:border-2 text-white sm:py-2 sm:px-4 rounded-xl mr-8 sm:mr-8">View Code</a></div>
-          <div ><Link href="/projects/Upcoming">
-            <a className="bg-white box-border border-black border-2 text-black sm:py-2 sm:px-4 rounded-xl sm:mr-28">Details</a>
-            </Link>
-            </div>
-          </div> 
-
-          <div className="flex justify-between border-t-2 pt-4  border-black">
-        <div className="grow sm:ml-36">Google Contact Clone</div> 
-        <div><a href="https://github.com/pratikdevdas/frontendphonebook" className="bg-black border-black sm:border-2 text-white sm:py-2 sm:px-4 rounded-xl mr-8 sm:mr-8">View Code</a></div>
-        <div ><Link href="/projects/Upcoming">
-            <a className="bg-white box-border border-black border-2 text-black sm:py-2 sm:px-4 rounded-xl sm:mr-28">Details</a>
-            </Link>
-            </div>
-          </div> 
-          
-          <div className="flex justify-center pt-8"><a href="">view more...</a> </div>
+          <div >
+          <hr className="mx-auto" style={{maxWidth:'70vw'}}/>
+          </div>
       </div>
+        )
+      }
       </div>
 
       </div>
