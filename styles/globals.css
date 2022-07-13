@@ -10,9 +10,15 @@ body {
   margin: 0;
   font-family: 'Patrick Hand', cursive;
   display: block;
-  font-size: 24px;
   max-width: 1600px;
+  font-size: 14px;
   margin: auto;
+}
+
+@media screen and (min-width:640px) {
+  html,body{
+    font-size: 24px;
+  }
 }
 
 a {

@@ -37,7 +37,7 @@ export default function Middle(){
         <>
          <div className="bg-white px-4 py-3 flex items-center justify-center  border-gray-200 "> 
         <div>
-          <nav className="relative rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+          <nav className=" flex sm:flex-row relative rounded-md shadow-sm -space-x-px" aria-label="Pagination">
             <button
               className="z-10 bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex rounded-l-md items-center px-1 py-1 sm:px-4 sm:py-2 border text-sm font-medium hover:underline"
               onClick={handleToggle}
