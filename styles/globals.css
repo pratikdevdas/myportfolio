@@ -11,6 +11,8 @@ body {
   font-family: 'Patrick Hand', cursive;
   display: block;
   font-size: 24px;
+  max-width: 1600px;
+  margin: auto;
 }
 
 a {

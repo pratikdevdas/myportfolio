@@ -18,7 +18,7 @@ export default function Home() {
       </div>
         <div className='flex-grow'>
 
-        <Middle></Middle>
+        <Middle/>
         </div>
         <Footer></Footer>
       </div>
