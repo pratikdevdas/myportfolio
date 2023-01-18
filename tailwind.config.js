@@ -1,18 +1,21 @@
 module.exports = {
-  darkMode: 'class',
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily:{
-      
+    fontFamily: {
+      'raleway' : ['Raleway', 'sans-serif'],
+      'libre' : ['Libre Baskerville', 'serif']
     },
-    colors:{
-      'pblack':'#121212',
-      
+    colors: {
+      dark: "#1E1F25",
+      light: "#FDFCFE",
+      purple:"#7B5FA6",
+      green: "#53BFAC"
     },
     extend: {},
   },
   plugins: [],
-}
+};
