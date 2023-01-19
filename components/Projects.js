@@ -1,38 +1,35 @@
 import Link from "next/link";
-import project from "../pages/api/data.js";
+import Image from "next/image";
+import ProjectImage from "../public/images/restproject.png";
 const Projects = () => {
+  const project = [];
+
   return (
-    <div>
-      <div className="pl-10 text-3xl">Projects</div>
-      <div>
-        {project.map((info) => (
-          <div
-            key={info.key}
-            className="mx-4 flex flex-col items-stretch justify-between pt-5 xl:mx-auto"
-          >
-            <div className="border-black flex  justify-between py-4">
-              <div className="grow sm:ml-36">{info.title}</div>
-              <div>
-                <a
-                  href={info.github}
-                  className="bg-black border-black text-white mr-2 rounded-xl p-px sm:mr-8 sm:border-2 lg:py-2 lg:px-4"
-                >
-                  View Code
-                </a>
-              </div>
-              <div>
-                <Link href={info.redirect}>
-                  <a className="bg-white border-black text-black box-border rounded-xl border-2 p-px sm:mr-28 lg:py-2 lg:px-4">
-                    View Live
-                  </a>
-                </Link>
-              </div>
-            </div>
-            <div className="mx-auto w-full sm:w-9/12">
-              <hr className="" />
-            </div>
+    <div className=" md:py16 lg:py-18 mx-auto max-w-[990px] px-6 py-10 lg:max-w-[1150px] ">
+      <div className="text-center ">
+        <h1 className="lg:text-4xl  pb-4 text-3xl font-bold text-green lg:pb-12">
+          PORTFOLIO
+        </h1>
+      </div>
+
+      <div className="mx-4 mt-8 grid grid-cols-1 gap-8 md:mx-14 lg:mx-0 lg:grid-cols-2">
+        <div>
+          <Image
+            className="relative z-10 w-full rounded-md object-cover md:h-96"
+            width={300}
+            height={300}
+            src="/../public/images/restproject.png"
+            alt="d"
+          />
+           from-gray-700 via-gray-900 to-black
+
+          <div className="relative z-20 mx-auto -mt-20  p-6 shadow   bg-g700  rounded-b-lg">
+                <h3 className="text-xl font-bold">Rest Country Display</h3>
+              <p className="mt-3 font-libre text-xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

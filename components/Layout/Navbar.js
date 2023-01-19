@@ -3,10 +3,10 @@ import React, { useState } from "react";
 
 function Navbar() {
   return (
-    <div>
-      <nav className="max-w-[1280px] mx-auto flex justify-between px-4">
-        <div className="flex items-center justify-around py-9">
-          <div className="grow pl-6 text-3xl font-bold ">PRATIK</div>
+    <div className="bg-g900 ">
+      <nav className="max-w-[1280px] mx-auto  flex justify-between px-4">
+        <div className="flex items-center justify-around py-4 md:py-6">
+          <div className="grow pl-3 text-2xl lg:text-3xl font-bold ">PRATIK</div>
           {/* <div className="px-16 py-6">
             <button
               aria-label="Toggle Dark Mode"
