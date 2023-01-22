@@ -5,7 +5,7 @@ const Projects = () => {
   const project = [];
 
   return (
-    <div className=" md:py16 lg:py-18 mx-auto max-w-[990px] px-6 py-10 lg:max-w-[1150px] ">
+    <div className=" md:py16 lg:py-18 mx-auto max-w-[990px] px-10 py-10 lg:max-w-[1150px] ">
       <div className="text-center ">
         <h1 className="lg:text-4xl  pb-4 text-3xl font-bold text-green lg:pb-12">
           PORTFOLIO
@@ -21,12 +21,11 @@ const Projects = () => {
             src="/../public/images/restproject.png"
             alt="d"
           />
-           from-gray-700 via-gray-900 to-black
 
           <div className="relative z-20 mx-auto -mt-20  p-6 shadow   bg-g700  rounded-b-lg">
                 <h3 className="text-xl font-bold">Rest Country Display</h3>
               <p className="mt-3 font-libre text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Displaying all the countries with help of rest country api.
               </p>
           </div>
         </div>

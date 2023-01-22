@@ -1,59 +1,46 @@
-import Image from "next/image";
+import {
+  Github,
+  LinkedIn,
+  Twitter,
+  Youtube,
+  Medium,
+} from "../../public/icons/Icons";
 
 function Footer() {
   return (
-    <div className="border-black relative border-t-2">
-      <div className="flex justify-center">
-        <div className="my-3 h-6 w-20  text-center ">Lets Connect</div>
+    <div className="flex flex-col lg:flex-row items-center justify-between px-20 py-10 md:px-8 md:py-20 text-light">
+      <div className="mb-10 lg:mb-0 text-center lg:text-left">
+        <h1 className="text-bold text-2xl ">Lets Connect</h1>
+        <a href = "mailto:pratikdevdas@outlook.com">
+        <p className="text-lg hover:underline">pratikdevdas@outlook.com</p>
+        </a>
+        
       </div>
-      <div className="flex flex-col  justify-center sm:flex-row ">
-        <div className="sm:px-8">
-          <a
-            href="https://twitter.com/pratikdevdas"
-            className="hover:underline"
-          >
-            {" "}
-            <Image
-              src="/icons/twitter.svg"
-              height={15}
-              width={15}
-              alt="twitter"
-            />{" "}
-            pratikdevdas{" "}
+      {/* icons */}
+      <div className="flex justify-center flex-wrap gap-6 md:gap-10">
+        <div className="">
+          <a href="https://twitter.com/pratikdevdas">
+            <Twitter />
           </a>
         </div>
-        <div className="sm:px-4">
-          <a href="https://github.com/pratikdevdas" className="hover:underline">
-            {" "}
-            <Image
-              src="/icons/github.svg"
-              height={15}
-              width={15}
-              alt="github"
-            />{" "}
-            pratikdevdas{" "}
+        <div>
+          <a href="https://github.com/pratikdevdas">
+            <Github />
           </a>
         </div>
-        <div className="sm:px-4">
-          <a
-            href="https://www.linkedin.com/in/pratikdevdas/"
-            className="hover:underline"
-          >
-            {" "}
-            <Image
-              src="/icons/linkedin.svg"
-              height={15}
-              width={15}
-              alt="linkedin"
-            />{" "}
-            pratikdevdas{" "}
+        <div className="">
+          <a href="https://www.linkedin.com/in/pratikdevdas/">
+            <LinkedIn />
           </a>
         </div>
-        <div className="sm:px-8">
-          <a href="mailto:pratikdevdas@outlook.com" className="hover:underline">
-            {" "}
-            <Image src="/icons/email.svg" height={15} width={15} alt="email" />
-            pratikdevdas@outlook.com
+        <div className="">
+          <a href="https://medium.com/@pratikdevdas">
+            <Medium />
+          </a>
+        </div>
+        <div className="">
+          <a href="https://www.youtube.com/@pratikdevdas">
+            <Youtube />
           </a>
         </div>
       </div>
