@@ -5,6 +5,7 @@ function Navbar() {
     <div className="bg-g900 ">
       <nav className="max-w-[660px] lg:max-w-[900px]   xl:max-w-[1100px] mx-auto  flex justify-between items-center py-4 md:py-6 px-4">
           <div className="pl-3 text-2xl lg:text-3xl font-bold">PRATIK</div>
+          
       </nav>
     </div>
   );
