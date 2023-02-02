@@ -3,15 +3,18 @@
         {
             "id": "restproject",
             "title": "Rest Country Display",
-            "description": "Displaying all the countries with help of rest country api.",
-			
-			"image":"/images/restproject.png"
+            "description": "Displaying all the countries with help of rest country api.",		
+			"image":"/images/restproject.png",
+            "url":"",
+            "github": ""
         },
         {
             "id": "movieproj",
             "title": "Movie Manager",
             "description": "Displaying all the countries with help of rest country api.",
-			"image":"/images/movieproj.png"
+			"image":"/images/movieproj.png",
+            "url":"",
+            "github": ""
         }
     
     ]
