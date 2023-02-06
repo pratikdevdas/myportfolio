@@ -3,7 +3,7 @@ import Image from "next/image";
 import Navbar from "../../components/Layout/Navbar";
 import { promises as fsPromises } from "fs";
 import path from "path";
-import Link from "Next/Link"
+
 const Post = (props) => {
   return (
     <div className="h-screen bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]  from-g700 via-g900 to-gblack font-raleway text-light">
