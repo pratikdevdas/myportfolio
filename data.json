@@ -5,8 +5,8 @@
             "title": "Rest Country Display",
             "description": "Displaying all the countries with help of rest country api. I made this project to learn basic react hook & scss 7-in-1 architecture.",		
 			"image":"/images/restproject.png",
-            "url":"sdf",
-            "github": "fg",
+            "url":"https://rest-countries-api-with-color-theme-switcher-master-lac.vercel.app/",
+            "github": "https://github.com/pratikdevdas/rest-countries-api-with-color-theme-switcher-master",
             "stacks":["react","scss"]
         },
         {

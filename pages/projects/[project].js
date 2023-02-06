@@ -3,12 +3,8 @@ import Image from "next/image";
 import Navbar from "../../components/Layout/Navbar";
 import { promises as fsPromises } from "fs";
 import path from "path";
-import Footer from "../../components/Layout/Footer";
-
+import Link from "Next/Link"
 const Post = (props) => {
-  const router = useRouter();
-  const pid = router.query;
-  console.log(props);
   return (
     <div className="h-screen bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]  from-g700 via-g900 to-gblack font-raleway text-light">
       <Navbar />
@@ -43,20 +39,22 @@ const Post = (props) => {
                 </div>
 
                 <div className="flex flex-col gap-4 py-4 font-raleway lg:w-9/12 lg:gap-6">
-                  {!!props.github.length && (
-                    <button
-                      type="button"
+                  {!!props.url.length && (
+                    <a
+                      href={props.url}
+                      type="a"
                       class="text-white mr-2 mb-2 rounded-lg bg-gradient-to-br from-green to-purple  px-4 py-2 text-center text-lg font-bold hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-purple dark:focus:ring-green lg:px-8 lg:py-4 lg:text-xl"
                     >
                       View Live
-                    </button>
+                    </a>
                   )}
-                  {!!props.url.length && (
-                    <button class="text-white hover:text-white dark:text-white group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-green to-purple p-0.5 text-lg font-medium hover:font-bold focus:outline-none focus:ring-4 focus:ring-green group-hover:from-green group-hover:to-purple dark:focus:ring-purple lg:p-1 lg:text-xl">
-                      <span class="relative w-full rounded-md bg-dark py-2 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-light lg:py-4">
-                        View Code
-                      </span>
-                    </button>
+                  {!!props.github.length && (
+                    <a href={props.github} class="text-white hover:text-white dark:text-white group relative mb-2 mr-2 flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-green to-purple p-0.5 text-lg font-medium hover:font-bold focus:outline-none focus:ring-4 focus:ring-green group-hover:from-green group-hover:to-purple dark:focus:ring-purple lg:p-1 lg:text-xl">
+                        <span class="relative w-full rounded-md bg-dark py-2 transition-all flex justify-center duration-75 ease-in group-hover:bg-opacity-0 dark:bg-light lg:py-4">
+                          View Code
+                        </span>
+          
+                    </a>
                   )}
                 </div>
               </div>
@@ -70,7 +68,9 @@ const Post = (props) => {
                 class="text-white text-md mr-2 mb-2 rounded-lg px-4 py-2 text-center font-bold
                       hover:border-2 hover:border-green  lg:px-8 lg:py-4 lg:text-xl"
               >
+                <Link href={`projects/`}>
                 Previous Project
+                </Link>
               </button>
             </div>
             <div>
@@ -79,7 +79,7 @@ const Post = (props) => {
                 class="text-white text-md mr-2 mb-2 rounded-lg px-4 py-2 text-center font-bold
                       hover:border-2 hover:border-green  lg:px-8 lg:py-4 lg:text-xl"
               >
-                Previous Project
+                Next Project
               </button>
             </div>
           </div>
@@ -108,6 +108,7 @@ export async function getStaticProps({ params }) {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
   const singleObjectData = JSON.parse(jsonData);
+  clg
   const singleObject = singleObjectData.projects.find(
     (n) => n.id === params.project
   );
