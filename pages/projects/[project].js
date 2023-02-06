@@ -68,9 +68,7 @@ const Post = (props) => {
                 class="text-white text-md mr-2 mb-2 rounded-lg px-4 py-2 text-center font-bold
                       hover:border-2 hover:border-green  lg:px-8 lg:py-4 lg:text-xl"
               >
-                <Link href={`projects/`}>
                 Previous Project
-                </Link>
               </button>
             </div>
             <div>
