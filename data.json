@@ -3,10 +3,11 @@
         {
             "id": "restproject",
             "title": "Rest Country Display",
-            "description": "Displaying all the countries with help of rest country api.",		
+            "description": "Displaying all the countries with help of rest country api. I made this project to learn basic react hook & scss 7-in-1 architecture.",		
 			"image":"/images/restproject.png",
-            "url":"",
-            "github": ""
+            "url":"sdf",
+            "github": "fg",
+            "stacks":["react","scss"]
         },
         {
             "id": "movieproj",
@@ -14,7 +15,8 @@
             "description": "Displaying all the countries with help of rest country api.",
 			"image":"/images/movieproj.png",
             "url":"",
-            "github": ""
+            "github": "",
+            "stacks":["react","redux"]
         }
     
     ]

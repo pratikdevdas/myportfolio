@@ -3,9 +3,10 @@ import Hero from "../components/Layout/Hero";
 import Navbar from "../components/Layout/Navbar";
 import Footer from "../components/Layout/Footer";
 import Projects from "../components/Projects";
+import {promises as fsPromises} from 'fs';
+import path from 'path'
 
 export default function Home(props) {
-  console.log(props.projects, 'dsa')
   return (
     <div>
       <Head>
@@ -33,15 +34,10 @@ export default function Home(props) {
   );
 }
 
-import {promises as fsPromises} from 'fs';
-import path from 'path'
 export async function getStaticProps() {
-  console.log(path);
   const filePath = path.join(process.cwd(), 'data.json');
-  console.log(filePath);
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
-
   return {
     props: objectData
   }
