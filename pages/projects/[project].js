@@ -108,7 +108,6 @@ export async function getStaticProps({ params }) {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
   const singleObjectData = JSON.parse(jsonData);
-  clg
   const singleObject = singleObjectData.projects.find(
     (n) => n.id === params.project
   );
