@@ -1,8 +1,8 @@
-import { useRouter } from "next/router";
 import Image from "next/image";
 import Navbar from "../../components/Layout/Navbar";
 import { promises as fsPromises } from "fs";
 import path from "path";
+import Link from "next/link";
 
 const Post = (props) => {
   return (
@@ -43,17 +43,19 @@ const Post = (props) => {
                     <a
                       href={props.url}
                       type="a"
-                      class="text-white mr-2 mb-2 rounded-lg bg-gradient-to-br from-green to-purple  px-4 py-2 text-center text-lg font-bold hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-purple dark:focus:ring-green lg:px-8 lg:py-4 lg:text-xl"
+                      className="text-white mr-2 mb-2 rounded-lg bg-gradient-to-br from-green to-purple  px-4 py-2 text-center text-lg font-bold hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-purple dark:focus:ring-green lg:px-8 lg:py-4 lg:text-xl"
                     >
                       View Live
                     </a>
                   )}
                   {!!props.github.length && (
-                    <a href={props.github} class="text-white hover:text-white dark:text-white group relative mb-2 mr-2 flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-green to-purple p-0.5 text-lg font-medium hover:font-bold focus:outline-none focus:ring-4 focus:ring-green group-hover:from-green group-hover:to-purple dark:focus:ring-purple lg:p-1 lg:text-xl">
-                        <span class="relative w-full rounded-md bg-dark py-2 transition-all flex justify-center duration-75 ease-in group-hover:bg-opacity-0 dark:bg-light lg:py-4">
-                          View Code
-                        </span>
-          
+                    <a
+                      href={props.github}
+                      className="text-white hover:text-white dark:text-white group relative mb-2 mr-2 flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-green to-purple p-0.5 text-lg font-medium hover:font-bold focus:outline-none focus:ring-4 focus:ring-green group-hover:from-green group-hover:to-purple dark:focus:ring-purple lg:p-1 lg:text-xl"
+                    >
+                      <span className="relative flex w-full justify-center rounded-md bg-dark py-2 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-light lg:py-4">
+                        View Code
+                      </span>
                     </a>
                   )}
                 </div>
@@ -62,23 +64,31 @@ const Post = (props) => {
           </div>
           {/* next previous section */}
           <div className="flex justify-around px-16 text-lg md:px-10 lg:text-3xl">
-            <div>
-              <button
-                type="button"
-                class="text-white text-md mr-2 mb-2 rounded-lg px-4 py-2 text-center font-bold
-                      hover:border-2 hover:border-green  lg:px-8 lg:py-4 lg:text-xl"
+            <div className={`${props.index === 1 ? "cursor-not-allowed" : ""}`}>
+              <Link
+                href={`${props?.prev}`}
+                className={`text-white text-md mr-2 mb-2 rounded-lg border-2 border-transparent px-4 py-2 text-center font-bold
+                      hover:border-2 hover:border-green  lg:px-8 lg:py-4 lg:text-xl ${
+                        props.index === 1
+                          ? "pointer-events-none hover:border-transparent"
+                          : ""
+                      }`}
               >
                 Previous Project
-              </button>
+              </Link>
             </div>
-            <div>
-              <button
-                type="button"
-                class="text-white text-md mr-2 mb-2 rounded-lg px-4 py-2 text-center font-bold
-                      hover:border-2 hover:border-green  lg:px-8 lg:py-4 lg:text-xl"
+            <div className={`${props.index === 2 ? "cursor-not-allowed" : ""}`}>
+              <Link
+                href={`${props?.next}`}
+                className={`text-white text-md mr-2 mb-2 rounded-lg border-2 border-transparent px-4 py-2 text-center font-bold
+                hover:border-2 hover:border-green  lg:px-8 lg:py-4 lg:text-xl ${
+                  props.index === 2
+                    ? " pointer-events-none hover:border-transparent  "
+                    : ""
+                }`}
               >
                 Next Project
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -93,7 +103,6 @@ export async function getStaticPaths() {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
-
   const paths = objectData.projects.map((p) => {
     return {
       params: { project: p.id.toString() },
@@ -103,6 +112,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  console.log(params, "ds");
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
   const singleObjectData = JSON.parse(jsonData);

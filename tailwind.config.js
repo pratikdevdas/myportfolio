@@ -16,7 +16,8 @@ module.exports = {
       green: "#3BBA9C",
       gblack: "#000",
       g700: "#374151",
-      g900: "#111827"
+      g900: "#111827",
+      transparent: "transparent"
     },
     extend: {},
   },
