@@ -63,11 +63,11 @@ const Post = (props) => {
             </div>
           </div>
           {/* next previous section */}
-          <div className="flex justify-around px-16 text-lg md:px-10 lg:text-3xl">
+          <div className="flex justify-around px-6 text-lg md:px-10 lg:text-3xl">
             <div className={`${props.index === 1 ? "cursor-not-allowed" : ""}`}>
               <Link
                 href={`${props?.prev}`}
-                className={`text-white text-md mr-2 mb-2 rounded-lg border-2 border-transparent px-4 py-2 text-center font-bold
+                className={`text-white text-md mr-2 mb-2 rounded-lg border-2 border-transparent px-4 md:py-2 text-center font-bold
                       hover:border-2 hover:border-green  lg:px-8 lg:py-4 lg:text-xl ${
                         props.index === 1
                           ? "pointer-events-none hover:border-transparent"
@@ -80,7 +80,7 @@ const Post = (props) => {
             <div className={`${props.index === 2 ? "cursor-not-allowed" : ""}`}>
               <Link
                 href={`${props?.next}`}
-                className={`text-white text-md mr-2 mb-2 rounded-lg border-2 border-transparent px-4 py-2 text-center font-bold
+                className={`text-white text-md mr-2 mb-2 rounded-lg border-2 border-transparent px-4 md:py-2 text-center font-bold
                 hover:border-2 hover:border-green  lg:px-8 lg:py-4 lg:text-xl ${
                   props.index === 2
                     ? " pointer-events-none hover:border-transparent  "
