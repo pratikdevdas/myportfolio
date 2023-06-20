@@ -1,11 +1,12 @@
 import Link from "next/link";
-// import { useTheme } from "next-themes";
-import React, { useState } from "react";
+import React from "react";
 function Navbar() {
   return (
-    <div className="bg-g900 ">
-      <nav className="max-w-[660px] lg:max-w-[900px]   xl:max-w-[1100px] mx-auto  flex justify-between items-center py-4 md:py-6 px-4">
-          <div className="pl-3 text-2xl lg:text-3xl font-bold"><Link href="/">PRATIK</Link></div>
+    <div className="bg-g900 text-light ">
+      <nav className="mx-auto flex   max-w-[660px] items-center  justify-between py-4 px-4 md:py-6 lg:max-w-[900px] xl:max-w-[1100px]">
+        <div className="pl-3 text-2xl font-bold lg:text-3xl">
+          <Link href="/">PRATIK</Link>
+        </div>
       </nav>
     </div>
   );

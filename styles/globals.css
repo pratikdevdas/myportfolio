@@ -3,11 +3,3 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Raleway:wght@700&display=swap');
-
-/* 
-@layer base {
-	:root {
-	  --color-g1: 55 65 81;
-	  --color-g2: 17 24 185;
-	}
-  } */

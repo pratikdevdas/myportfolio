@@ -24,7 +24,9 @@ const Projects = ({ projects }) => {
             <div className="relative z-20 mx-auto -mt-20 rounded-b-lg bg-g700   p-6  shadow">
               <h3 className="text-xl font-bold">{p.title}</h3>
               {/* displaying first line */}
-              <p className="mt-3 font-libre text-lg md:text-xl">{p.description.slice(0, p.description.indexOf('.'))}</p>
+              <p className="mt-3 font-libre text-lg md:text-xl">
+                {p.description.slice(0, p.description.indexOf("."))}
+              </p>
             </div>
           </Link>
         ))}
