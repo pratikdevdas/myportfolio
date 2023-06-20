@@ -15,10 +15,10 @@
             "index": 2,
             "id": "movieproj",
             "title": "Movie Manager",
-            "description": "A lovely IMDb clone with an improved UI and a tiny sharing wishlist feature. I made this to learn redux and its architecture.",
+            "description": "A lovely IMDb clone with an improved UI and a tiny sharing wishlist feature. I made this to learn redux and its architecture. Please run in an incongnito now",
 			"image":"/images/movieproj.png",
-            "url":"#",
-            "github": "#",
+            "url":"https://fetchmovie-remix.vercel.app/",
+            "github": "https://github.com/pratikdevdas/fetchmovie-remix",
             "stacks":["react","redux"],
             "prev": "restproject"
         }
