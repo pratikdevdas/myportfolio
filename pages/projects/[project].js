@@ -8,14 +8,10 @@ const Post = (props) => {
   return (
     <div>
       <Navbar />
-      <div className="h-screen bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]  from-g700 via-g900 to-gblack font-raleway text-light">
+      <div className="bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] pb-4 md:pb-0 from-g700 via-g900 to-gblack font-raleway text-light">
         <div className="mx-auto max-w-[660px] lg:max-w-[900px]   xl:max-w-[1100px]">
           <div className="text-3xl md:text-3xl lg:text-4xl ">
-            <div
-              className="flex w-full flex-col 
-          justify-start
-          pt-8 md:flex-row md:justify-between lg:py-20"
-            >
+            <div className="flex w-full flex-col justify-start pt-8 md:flex-row md:justify-between lg:py-20">
               <div className="mx-auto h-full flex-1 px-4 md:order-first md:px-10">
                 <Image
                   width={400}
@@ -69,12 +65,10 @@ const Post = (props) => {
             </div>
             {/* next previous section */}
             <div className="flex justify-around px-6 text-lg md:px-10 lg:text-3xl">
-              <div
-                className={`${props.index === 1 ? "cursor-not-allowed" : ""}`}
-              >
+              <div className={`${props.index === 1 ? "cursor-not-allowed" : ""}`}>
                 <Link
                   href={`${props?.prev}`}
-                  className={`text-white text-md mr-2 mb-2 rounded-lg border-2 border-transparent px-4 text-center font-bold hover:border-2
+                  className={`text-white text-sm md:text-md mr-2 mb-2 rounded-lg border-2 border-transparent px-4 text-center font-bold hover:border-2
                       hover:border-green md:py-2  lg:px-8 lg:py-4 lg:text-xl ${
                         props.index === 1
                           ? "pointer-events-none hover:border-transparent"
@@ -84,12 +78,10 @@ const Post = (props) => {
                   Previous Project
                 </Link>
               </div>
-              <div
-                className={`${props.index === 2 ? "cursor-not-allowed" : ""}`}
-              >
+              <div className={`${props.index === 2 ? "cursor-not-allowed" : ""}`}>
                 <Link
                   href={`${props?.next}`}
-                  className={`text-white text-md mr-2 mb-2 rounded-lg border-2 border-transparent px-4 text-center font-bold hover:border-2
+                  className={`text-white text-sm md:text-md mr-2 mb-2 rounded-lg border-2 border-transparent px-4 text-center font-bold hover:border-2
                 hover:border-green md:py-2  lg:px-8 lg:py-4 lg:text-xl ${
                   props.index === 2
                     ? " pointer-events-none hover:border-transparent  "
