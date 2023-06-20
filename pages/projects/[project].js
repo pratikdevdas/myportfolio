@@ -6,11 +6,11 @@ import Link from "next/link";
 
 const Post = (props) => {
   return (
-    <div>
+    <div className="md:h-screen">
       <Navbar />
-      <div className="bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] pb-4 md:pb-0 from-g700 via-g900 to-gblack font-raleway text-light">
-        <div className="mx-auto max-w-[660px] lg:max-w-[900px]   xl:max-w-[1100px]">
-          <div className="text-3xl md:text-3xl lg:text-4xl ">
+      <div className="h-full bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] pb-4 md:pb-0 from-g700 via-g900 to-gblack font-raleway text-light">
+        <div className="mx-auto max-w-[660px] lg:max-w-[1000px]   xl:max-w-[1100px]">
+          <div className="text-3xl md:text-3xl lg:text-4xl">
             <div className="flex w-full flex-col justify-start pt-8 md:flex-row md:justify-between lg:py-20">
               <div className="mx-auto h-full flex-1 px-4 md:order-first md:px-10">
                 <Image
@@ -21,14 +21,14 @@ const Post = (props) => {
                   className="rounded-lg"
                 ></Image>
               </div>
-              <div className="mx-auto flex-1 py-8 px-4 md:py-0 md:px-0">
+              <div className="mx-auto  flex-1 py-8 px-4 md:py-0 md:px-0">
                 <div className="font-semibold leading-none">{props.title}</div>
                 <div className="mt-6 font-libre text-lg md:text-xl lg:text-2xl">
                   <p className="lg:w-9/12">{props.description}</p>
                   <div className="text-green">
-                    <ul className="flex py-2 lg:py-3">
+                    <ul className="flex lg:w-9/12 gap-3 flex-wrap py-2 lg:py-3">
                       {props.stacks.map((n, i) => (
-                        <li className="pr-4" key={i}>
+                        <li className="" key={i}>
                           -{n}
                         </li>
                       ))}
