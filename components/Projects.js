@@ -12,7 +12,11 @@ const Projects = ({ projects }) => {
 
       <div className="mx-4 mt-8 grid grid-cols-1 gap-8 md:mx-14 lg:mx-0 lg:grid-cols-2">
         {projects.reverse().map((p) => (
-          <Link href={`/projects/${p.id}`} key={p.id} className="hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+          <Link
+            href={`/projects/${p.id}`}
+            key={p.id}
+            className="transition-shadow duration-300 ease-in-out hover:shadow-2xl"
+          >
             <Image
               className="relative z-10 w-full rounded-md object-cover md:h-96"
               width={300}
@@ -21,10 +25,10 @@ const Projects = ({ projects }) => {
               src={`${p.image}`}
               alt="d"
             />
-            <div className="relative z-20 mx-auto -mt-20 rounded-b-lg bg-g700  p-4 md:p-6  shadow">
+            <div className="relative z-20 mx-auto -mt-20 rounded-b-lg bg-g700  p-4 shadow  md:p-6">
               <h3 className="text-xl font-bold">{p.title}</h3>
               {/* displaying first line */}
-              <p className="mt-3 font-libre text-lg md:text-xl">
+              <p className="font-libre mt-3 text-lg md:text-xl">
                 {p.description.slice(0, p.description.indexOf("."))}
               </p>
             </div>

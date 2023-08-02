@@ -5,7 +5,6 @@ import Footer from "../components/Layout/Footer";
 import Projects from "../components/Projects";
 import { promises as fsPromises } from "fs";
 import path from "path";
-import HeroImage from "../public/images/ProfileHero.png";
 
 export default function Home(props) {
   return (
