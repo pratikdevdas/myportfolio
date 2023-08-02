@@ -10,7 +10,7 @@ const Hero = () => {
           <div className="font-semibold leading-none">
             <span className=""> Hey,</span> My Name is Pratik
           </div>
-          <div className="mt-6 font-libre text-lg md:text-xl lg:text-2xl">
+          <div className="mt-6 text-base md:text-lg lg:text-xl">
             <p>
               I am a frontend developer who loves to read Currently working as a
               course instructor at{" "}
@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="my-4">
             <a
               href="https://drive.google.com/file/d/1Eqe0bgeyJsI1lH6vXaEdsQOApeMQotMI/view"
-              className="text-white text-raleway text-bold rounded-full bg-purple  px-4 py-2  font-libre text-lg tracking-wide outline-none transition duration-200 ease-in-out hover:bg-green focus:outline-none md:py-3"
+              className="text-white text-raleway block w-28 text-bold rounded-full bg-purple text-center font-libre text-lg tracking-wide outline-none transition duration-300 ease-in-out hover:translate-y-2 md:py-3"
             >
               RESUME
             </a>

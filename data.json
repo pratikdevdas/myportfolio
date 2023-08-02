@@ -1,7 +1,6 @@
 {
     "projects": [
         {
-            "index": 1,
             "id": "restproject",
             "title": "Rest Country Display",
             "description": "Displaying all the countries with help of rest country api. I made this project to learn basic react hook & scss 7-in-1 architecture.",		
@@ -9,18 +8,17 @@
             "url":"https://rest-countries-api-with-color-theme-switcher-master-lac.vercel.app/",
             "github": "https://github.com/pratikdevdas/rest-countries-api-with-color-theme-switcher-master",
             "stacks":["react","scss"],
-            "next": "movieproj"
+            "prev": "movieproj"
         },
         {
-            "index": 2,
             "id": "movieproj",
             "title": "Movie Manager",
-            "description": "A lovely IMDb clone with an improved UI and a tiny sharing wishlist feature. I made this to learn redux and its architecture. Please run in an incongnito now",
+            "description": "A Movie listing web app with sharing wishlist feature. I made this to learn Remix and styled-components.",
 			"image":"/images/movieproj.png",
             "url":"https://fetchmovie-remix.vercel.app/",
             "github": "https://github.com/pratikdevdas/fetchmovie-remix",
-            "stacks":["react","redux"],
-            "prev": "restproject"
+            "stacks":["react","remix", "styledComponents", "radixUi", "redis(upstash)"],
+            "next": "restproject"
         }
     
     ]

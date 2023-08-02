@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'raleway' : ['Raleway', 'sans-serif'],
-      'libre' : ['Libre Baskerville', 'serif']
+      'roboto' : ['Roboto', 'sans-serif']
     },
     colors: {
       dark: "#1E1F25",

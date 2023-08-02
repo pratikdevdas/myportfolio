@@ -5,14 +5,15 @@ import path from "path";
 import Link from "next/link";
 
 const Post = (props) => {
+  console.log(props)
   return (
-    <div className="md:h-screen">
+    <div className="h-full md:h-screen">
       <Navbar />
-      <div className="h-full bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] pb-4 md:pb-0 from-g700 via-g900 to-gblack font-raleway text-light">
-        <div className="mx-auto max-w-[660px] lg:max-w-[1000px]   xl:max-w-[1100px]">
-          <div className="text-3xl md:text-3xl lg:text-4xl">
-            <div className="flex w-full flex-col justify-start pt-8 md:flex-row md:justify-between lg:py-20">
-              <div className="mx-auto h-full flex-1 px-4 md:order-first md:px-10">
+      <div className="h-full bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-g700 via-g900 to-gblack pb-4 font-raleway text-light md:pb-0">
+        <div className="mx-auto max-w-[700px] lg:max-w-[1000px]   xl:max-w-[1100px]">
+          <div>
+            <div className="flex w-full flex-col justify-start items-center pt-8 md:flex-row md:justify-between lg:py-20">
+              <div className="mx-auto h-full flex-1 px-4 md:order-first md:px-6">
                 <Image
                   width={400}
                   height={300}
@@ -21,12 +22,14 @@ const Post = (props) => {
                   className="rounded-lg"
                 ></Image>
               </div>
-              <div className="mx-auto  flex-1 py-8 px-4 md:py-0 md:px-0">
-                <div className="font-semibold leading-none">{props.title}</div>
-                <div className="mt-6 font-libre text-lg md:text-xl lg:text-2xl">
-                  <p className="lg:w-9/12">{props.description}</p>
-                  <div className="text-green">
-                    <ul className="flex lg:w-9/12 gap-3 flex-wrap py-2 lg:py-3">
+              <div className="flex-1 text-center md:w-96 md:text-left py-8 sm:px-4 md:py-0 lg:px-0">
+                <div className="text-xl font-semibold leading-none lg:text-3xl">
+                  {props.title}
+                </div>
+                <div className="mt-6 font-roboto text-base md:text-lg lg:text-xl">
+                  <p className=" w-64 mx-auto sm:mx-0 sm:w-90 md:w-[400px]">{props.description}</p>
+                  <div className="w-64 mx-auto sm:mx-0 sm:w-90 md:w-[400px] text-green">
+                    <ul className="flex justify-center md:justify-start flex-wrap gap-3 py-4 lg:py-3">
                       {props.stacks.map((n, i) => (
                         <li className="" key={i}>
                           -{n}
@@ -35,14 +38,14 @@ const Post = (props) => {
                     </ul>
                   </div>
 
-                  <div className="flex flex-col gap-4 py-4 font-raleway lg:w-9/12 lg:gap-6">
+                  <div className="flex gap-4 py-4 font-raleway lg:gap-6">
                     {!!props.url.length && (
                       <a
                         href={props.url}
                         type="a"
                         rel="noopener noreferrer"
                         target="_blank"
-                        className="text-white mr-2 mb-2 rounded-lg bg-gradient-to-br from-green to-purple  px-4 py-2 text-center text-lg font-bold hover:bg-gradient-to-bl focus:outline-none focus:ring-4  focus:ring-purple dark:focus:ring-green lg:px-8 lg:py-4 lg:text-xl"
+                        className="text-purple-100 w-32 sm:w-36 lg:w-48 rounded-xl border-2 border-gblack bg-gradient-to-l from-green to-purple px-2 sm:px-6 py-2 text-center text-gblack transition-all duration-300 ease-in-out hover:translate-y-1 hover:border-light"
                       >
                         View Live
                       </a>
@@ -52,11 +55,9 @@ const Post = (props) => {
                         href={props.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-white dark:text-white group relative mb-2 mr-2 flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-green to-purple p-0.5 text-lg font-medium hover:font-bold focus:outline-none focus:ring-4 focus:ring-green group-hover:from-green group-hover:to-purple dark:focus:ring-purple lg:p-1 lg:text-xl"
+                        className="text-purple-100 w-32 sm:w-36 lg:w-48 rounded-xl border-2 border-gblack bg-gradient-to-l from-green to-purple px-2 sm:px-6 py-2 text-center text-gblack transition-all duration-300 ease-in-out hover:translate-y-1 hover:border-light"
                       >
-                        <span className="relative flex w-full justify-center rounded-md bg-dark py-2 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-light lg:py-4">
-                          View Code
-                        </span>
+                        View Code
                       </a>
                     )}
                   </div>
@@ -64,32 +65,12 @@ const Post = (props) => {
               </div>
             </div>
             {/* next previous section */}
-            <div className="flex justify-around px-6 text-lg md:px-10 lg:text-3xl">
-              <div className={`${props.index === 1 ? "cursor-not-allowed" : ""}`}>
-                <Link
-                  href={`${props?.prev}`}
-                  className={`text-white text-sm md:text-md mr-2 mb-2 rounded-lg border-2 border-transparent px-4 text-center font-bold hover:border-2
-                      hover:border-green md:py-2  lg:px-8 lg:py-4 lg:text-xl ${
-                        props.index === 1
-                          ? "pointer-events-none hover:border-transparent"
-                          : ""
-                      }`}
-                >
-                  Previous Project
-                </Link>
+            <div className="flex w-full justify-between px-4 my-4 lg:my-0 sm:px-10 text-base md:text-lg lg:text-xl ">
+              <div>
+                  <Link className={`text-white block text-raleway text-bold w-full bg-transparent  px-3  text-center font-roboto  transition duration-300 ease-in-out ${props.prev ? 'hover:-translate-x-2  hover:text-purple hover:underline' : 'hover:cursor-not-allowed'}  md:py-2`}  href={`./${props.prev ? props.prev : props.id}`}>Previous Project</Link>
               </div>
-              <div className={`${props.index === 2 ? "cursor-not-allowed" : ""}`}>
-                <Link
-                  href={`${props?.next}`}
-                  className={`text-white text-sm md:text-md mr-2 mb-2 rounded-lg border-2 border-transparent px-4 text-center font-bold hover:border-2
-                hover:border-green md:py-2  lg:px-8 lg:py-4 lg:text-xl ${
-                  props.index === 2
-                    ? " pointer-events-none hover:border-transparent  "
-                    : ""
-                }`}
-                >
-                  Next Project
-                </Link>
+              <div>
+              <Link className={`text-white block text-raleway text-bold w-full bg-transparent  px-3  lg:mr-16 text-center font-roboto transition duration-300 ease-in-out ${props.next ? 'hover:translate-x-2  hover:text-green hover:underline' : 'hover:cursor-not-allowed'}  md:py-2`}  href={`./${props.next ? props.next : props.id}`}>Next Project</Link>
               </div>
             </div>
           </div>
