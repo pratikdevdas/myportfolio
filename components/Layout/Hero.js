@@ -20,7 +20,7 @@ const Hero = () => {
               >
                 TAGD
               </a>{" "}
-              and as a freelance dev at <a href="">Fiverr</a>
+              and as a freelance dev at Fiverr
             </p>
           </div>
           <div className="my-4">
