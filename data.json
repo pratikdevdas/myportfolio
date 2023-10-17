@@ -18,8 +18,18 @@
             "url":"https://fetchmovie-remix.vercel.app/",
             "github": "https://github.com/pratikdevdas/fetchmovie-remix",
             "stacks":["react","remix", "styledComponents", "radixUi", "redis(upstash)"],
-            "next": "restproject"
-        }
-    
+            "next": "restproject",
+            "prev": "letterioproj"
+        },
+        {
+            "id": "letterioproj",
+            "title": "Letterio",
+            "description": "Browse and Send anonymous letters with ease on this website. I was trying out some light weight js and this was the end result.",
+			"image":"/images/letterioproject.png",
+            "url":"https://letterio.pratikdevdas.com/",
+            "github": "https://github.com/pratikdevdas/letterio",
+            "stacks":["html","css", "javascript", "quilljs", "json-server"],
+            "next": "movieproj"
+        }   
     ]
 }
