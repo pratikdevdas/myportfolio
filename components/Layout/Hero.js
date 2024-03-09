@@ -25,7 +25,7 @@ const Hero = () => {
           </div>
           <div className="my-4">
             <a
-              href="https://drive.google.com/file/d/1sVOW3DcEiSeCRxYimqF56HU5s7MgAKHJ/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Y0uBj5ORuLn9L7YK6JRHgf2696IIar9Y/view"
               className="text-white text-raleway text-bold font-libre block w-28 rounded-full bg-purple text-center text-lg tracking-wide outline-none transition duration-300 ease-in-out hover:translate-y-2 md:py-3"
             >
               RESUME
