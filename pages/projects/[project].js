@@ -4,8 +4,7 @@ import { promises as fsPromises } from "fs";
 import path from "path";
 import Link from "next/link";
 
-const Post = (props) => {
-  console.log(props);
+const Post = (props) => {;
   return (
     <div className="h-full md:h-screen">
       <Navbar />
@@ -69,7 +68,7 @@ const Post = (props) => {
             {/* next previous section */}
             <div className="my-4 flex w-full justify-between px-4 text-base sm:px-10 md:text-lg lg:my-0 lg:text-xl ">
               <div>
-                <Link
+                {props.prev ? <Link
                   className={`text-white text-raleway text-bold block w-full bg-transparent  px-3  text-center font-roboto  transition duration-300 ease-in-out ${
                     props.prev
                       ? "hover:-translate-x-2  hover:text-purple hover:underline"
@@ -78,9 +77,11 @@ const Post = (props) => {
                   href={`./${props.prev ? props.prev : props.id}`}
                 >
                   Previous Project
-                </Link>
+                </Link> : <div>{' '}</div>}
+                
               </div>
               <div>
+                {props.next ? 
                 <Link
                   className={`text-white text-raleway text-bold block w-full bg-transparent  px-3  text-center font-roboto transition duration-300 ease-in-out lg:mr-16 ${
                     props.next
@@ -90,7 +91,7 @@ const Post = (props) => {
                   href={`./${props.next ? props.next : props.id}`}
                 >
                   Next Project
-                </Link>
+                </Link>  : <div>{' '}</div>}
               </div>
             </div>
           </div>
@@ -106,7 +107,8 @@ export async function getStaticPaths() {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
-  const paths = objectData.projects.map((p) => {
+  console.log(objectData, "objectData");
+  const paths = objectData.projects.reverse().map((p) => {
     return {
       params: { project: p.id.toString() },
     };
