@@ -4,7 +4,7 @@ import { promises as fsPromises } from "fs";
 import path from "path";
 import Link from "next/link";
 
-const Post = (props) => {;
+const Post = (props:any) => {;
   return (
     <div className="h-full md:h-screen">
       <Navbar />
@@ -31,7 +31,7 @@ const Post = (props) => {;
                   </p>
                   <div className="sm:w-90 mx-auto w-64 text-green sm:mx-0 md:w-[400px]">
                     <ul className="flex flex-wrap justify-center gap-3 py-4 md:justify-start lg:py-3">
-                      {props.stacks.map((n, i) => (
+                      {props.stacks.map((n: any, i: any) => (
                         <li className="" key={i}>
                           -{n}
                         </li>
@@ -106,9 +106,9 @@ export default Post;
 export async function getStaticPaths() {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
-  const objectData = JSON.parse(jsonData);
+  const objectData = JSON.parse(jsonData as any);
   console.log(objectData, "objectData");
-  const paths = objectData.projects.reverse().map((p) => {
+  const paths = objectData.projects.reverse().map((p : any) => {
     return {
       params: { project: p.id.toString() },
     };
@@ -116,13 +116,13 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: any) {
   console.log(params, "ds");
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
-  const singleObjectData = JSON.parse(jsonData);
+  const singleObjectData = JSON.parse(jsonData as any);
   const singleObject = singleObjectData.projects.find(
-    (n) => n.id === params.project
+    (n: any) => n.id === params.project
   );
   return {
     props: singleObject,
