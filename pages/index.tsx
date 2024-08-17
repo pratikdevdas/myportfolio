@@ -6,7 +6,7 @@ import Projects from "../components/Projects";
 import { promises as fsPromises } from "fs";
 import path from "path";
 
-export default function Home(props) {
+export default function Home(props: any) {
   return (
     <div>
       <Head>
@@ -52,7 +52,7 @@ export default function Home(props) {
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
-  const objectData = JSON.parse(jsonData);
+  const objectData = JSON.parse(jsonData as any);
   return {
     props: objectData,
   };
