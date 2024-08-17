@@ -11,7 +11,7 @@ export default function Error() {
           className="text-white text-raleway text-bold block w-full bg-transparent text-center font-roboto text-xl text-light transition duration-300 ease-in-out hover:scale-100  hover:text-green hover:underline "
           href="/"
         >
-          Take Me Back
+          Take Me Home
         </Link>
         <div className=" mx-16 rounded-full bg-light ">
           <Image src={four} width={600} alt="Profile" className="mx-auto" />
