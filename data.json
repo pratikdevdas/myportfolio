@@ -10,6 +10,7 @@
             "github": "https://github.com/pratikdevdas/rest-countries-api-with-color-theme-switcher-master",
             "stacks":["react","scss"],
             "prev": "movieproj"
+
         },
         {
             "id": "movieproj",

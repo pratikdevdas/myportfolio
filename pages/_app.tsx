@@ -1,8 +1,8 @@
 import "../styles/globals.css";
 import Script from "next/script";
 import { Fragment } from "react";
-
-function MyApp({ Component, pageProps }) {
+import { AppProps } from "next/app";
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Fragment>
       <Component {...pageProps} />
