@@ -1,17 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Projects = ({ projects }) => {
+const Projects = ({ projects }: any) => {
   return (
-    <div className=" md:py16 lg:py-18 mx-auto max-w-[990px] px-10 py-10 lg:max-w-[1150px] ">
+    <div className=" md:py16 lg:py-48 mx-auto max-w-[990px] px-10 py-10 lg:max-w-[1150px] ">
       <div className="text-center ">
-        <h1 className="pb-4  text-3xl font-bold text-green lg:pb-12 lg:text-4xl">
-          PORTFOLIO
+        <h1 className="pb-4  text-6xl text-dark-green-fluorescent font-medium font-dmsans">
+          Portfolio
         </h1>
       </div>
 
       <div className="mx-4 mt-8 grid grid-cols-1 gap-8 md:mx-14 lg:mx-0 lg:grid-cols-2">
-        {projects.reverse().map((p) => (
+        {projects.reverse().map((p:any) => (
           <Link
             href={`/projects/${p.id}`}
             key={p.id}

@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
   content: [
@@ -6,8 +7,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      raleway: ["Raleway", "sans-serif"],
-      roboto: ["Roboto", "sans-serif"],
+      dmsans: ['var(--font-dmSans)', 'sans-serif'],
+      // roboto: ["", "sans-serif"],
       helvetica: [],
       "font-grotesk": [],
     },
@@ -21,7 +22,7 @@ module.exports = {
       "3xl": "30px",
       "4xl": "36px",
       "5xl": "48px",
-      "6xl": "60px",
+      "6xl": "64px",
       "7xl": "72px",
       // Optionally, you can add bigger sizes here:
       "8xl": "96px",
@@ -42,7 +43,8 @@ module.exports = {
           900: "#00261E",
           950: "#1A2327",
           1000: "#0F1518",
-          fluorescent: "#F0F9F7",
+          fluorescent: "#7DFFAF",
+          opaque: "#131B1E",
         },
       },
       light: "#FDFCFE",

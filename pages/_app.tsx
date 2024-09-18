@@ -1,11 +1,19 @@
 import "../styles/globals.css";
 import Script from "next/script";
-import { Fragment } from "react";
 import { AppProps } from "next/app";
+import { DM_Sans } from "next/font/google";
+
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dmSans',
+})
+ 
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Fragment>
-      <Component {...pageProps} />
+    <main className={`${dmSans.variable} font-sans`}>
+      <Component {...pageProps} /> 
       <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       <noscript>
         {/* eslint-disable @next/next/no-img-element */}
@@ -15,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </noscript>
-    </Fragment>
+    </main>
   );
 }
 
