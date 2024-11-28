@@ -6,13 +6,12 @@ import { DM_Sans } from "next/font/google";
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
-  variable: '--font-dmSans',
 })
  
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${dmSans.variable} font-sans`}>
+    <main className={`${dmSans.className} font-sans`}>
       <Component {...pageProps} /> 
       <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       <noscript>

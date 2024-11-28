@@ -54,6 +54,7 @@ module.exports = {
       g700: "#374151",
       g900: "#111827",
       transparent: "transparent",
+      white: "#fff",
     },
     extend: {},
   },
