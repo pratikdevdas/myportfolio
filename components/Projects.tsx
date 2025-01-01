@@ -3,34 +3,34 @@ import Link from "next/link";
 
 const Projects = ({ projects }: any) => {
   return (
-    <div className=" md:py16 lg:py-48 mx-auto max-w-[990px] px-10 py-10 lg:max-w-[1150px] ">
-      <div className="text-center ">
-        <h1 className="pb-4  text-6xl text-dark-green-fluorescent font-medium font-dmsans">
+    <div className="mx-auto max-w-[990px] px-6 py-16 lg:max-w-[1150px] lg:py-32">
+      <div className="text-center mb-12">
+        <h1 className="text-5xl text-dark-green-fluorescent font-bold">
           Portfolio
         </h1>
       </div>
 
-      <div className="mx-4 mt-8 grid grid-cols-1 gap-8 md:mx-14 lg:mx-0 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
         {projects.reverse().map((p:any) => (
           <Link
             href={`/projects/${p.id}`}
             key={p.id}
-            className="transition-shadow duration-300 ease-in-out hover:shadow-2xl"
+            className="group transition-all duration-300 hover:-translate-y-2"
           >
-            <Image
-              className="relative z-10 w-full rounded-md object-cover md:h-96"
-              width={300}
-              height={300}
-              // preferable p.id should be same as p.image
-              src={`${p.image}`}
-              alt="d"
-            />
-            <div className="relative z-20 mx-auto -mt-20 rounded-b-lg bg-g700  p-4 shadow  md:p-6">
-              <h3 className="text-xl font-bold">{p.title}</h3>
-              {/* displaying first line */}
-              <p className="font-libre mt-3 text-lg md:text-xl">
-                {p.description.slice(0, p.description.indexOf("."))}
-              </p>
+            <div className="rounded-xl overflow-hidden bg-g700 shadow-lg">
+              <Image
+                className="w-full h-64 object-cover object-center"
+                width={300}
+                height={300}
+                src={`${p.image}`}
+                alt={p.title}
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3">{p.title}</h3>
+                <p className="text-lg text-gray-300">
+                  {p.description.slice(0, p.description.indexOf("."))}
+                </p>
+              </div>
             </div>
           </Link>
         ))}
