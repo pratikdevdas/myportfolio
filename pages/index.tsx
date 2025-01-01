@@ -16,7 +16,7 @@ export default function Home(props: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="bg-dark-green-1000 text-lg md:text-xl">
-        <div className="bg-yellow-500 text-black py-2 px-4 text-center font-medium text-dark-green-100">
+        <div className="bg-yellow-500 text-black py-2 px-4 text-center font-medium text-dark-green-100  ">
           <p>🚧 This site is under construction - it really doesn&apos;t look like this! Kaam abhi chal raha hai 🏗️. Busy in my new job.</p>
         </div>
 
