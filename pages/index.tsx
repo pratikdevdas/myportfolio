@@ -15,10 +15,14 @@ export default function Home(props: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-gblack text-lg md:text-xl">
-        <div className="bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]   from-g700 via-g900 to-gblack font-raleway text-light">
-          <Navbar />
-          <div className="mx-auto  max-w-[660px] lg:max-w-[900px]   xl:max-w-[1100px]">
+      <div className="bg-dark-green-1000 text-lg md:text-xl">
+        <div className="bg-yellow-500 text-black py-2 px-4 text-center font-medium text-dark-green-100  ">
+          <p>🚧 This site is under construction - it really doesn&apos;t look like this! Kaam abhi chal raha hai 🏗️. Busy in my new job.</p>
+        </div>
+
+        <div className="">
+          <div className="mx-auto py-12 max-w-[660px] lg:max-w-[900px] xl:max-w-[1184px]">
+            <Navbar />
             <Hero />
             <Projects projects={props.projects} />
           </div>
