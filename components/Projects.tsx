@@ -29,9 +29,10 @@ const Projects = ({ projects }: ProjectsProps) => {
           <Link
             href={`/projects/${project.id}`}
             key={project.id}
-            className="group transition-all duration-300 hover:-translate-y-2 focus:outline-none focus:ring-2 focus:ring-dark-green-fluorescent focus:ring-offset-2 focus:ring-offset-g700 rounded-xl"
+            className="group relative block"
           >
-            <article className="rounded-xl overflow-hidden bg-g700 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <article className="rounded-xl overflow-hidden bg-dark-green-950 shadow-lg transition-all duration-300 
+              hover:shadow-[0_0_15px_rgba(74,222,128,0.4)] border border-gray-800 hover:border-green-400">
               <div className="relative h-64">
                 <Image
                   className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
@@ -41,6 +42,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                   alt={`${project.title} preview`}
                   priority
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-green-950 to-transparent opacity-60" />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-3 text-dark-green-fluorescent group-hover:text-green-400 transition-colors">
