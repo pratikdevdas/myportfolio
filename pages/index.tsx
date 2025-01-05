@@ -18,18 +18,20 @@ export default function Home(props: any) {
       </Head>
       <div className="bg-dark-green-1000 text-lg md:text-xl">
         <div className="bg-yellow-500 text-black py-2 px-4 text-center font-medium text-dark-green-100  ">
-          <p>🚧 This site is under construction - it really doesn&apos;t look like this! Kaam abhi chal raha hai 🏗️. Busy in my new job.</p>
+          <p>🚧 Under Construction</p>
         </div>
 
         <div className="">
           <div className="mx-auto py-12 max-w-[660px] lg:max-w-[900px] xl:max-w-[1184px]">
             <Navbar />
             <Hero />
-            <Projects projects={props.projects} />
+            <div id="projects">
+              <Projects projects={props.projects} />
+            </div>
             {/* <Tools/> */}
           </div>
         </div>
-        <div className="mx-auto  max-w-[660px] lg:max-w-[900px]   xl:max-w-[1100px]">
+        <div id="contact" className="mx-auto max-w-[660px] lg:max-w-[900px] xl:max-w-[1100px]">
           <Footer />
         </div>
         <div className="flex justify-center border-t-2 border-t-g700  text-center text-lg text-light md:text-xl">

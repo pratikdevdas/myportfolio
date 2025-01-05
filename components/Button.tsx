@@ -8,6 +8,7 @@ type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'link'
   href?: string
   onClick?: () => void
+  openInNewTab?: boolean
 }
 
 const Button: React.FC<ButtonProps> = ({ 
@@ -15,6 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   className = '', 
   variant = 'primary',
   href,
+  openInNewTab = false,
   onClick
 }) => {
   const buttonClasses = clsx(
@@ -27,12 +29,24 @@ const Button: React.FC<ButtonProps> = ({
     className
   )
 
-  if (href) {
+ // TODO: refactor to onClick so function prop can manage everything
+  if (href && openInNewTab) {
     return (
       <Link 
         href={href} 
         target="_blank"
         rel="noopener noreferrer"
+        className={buttonClasses}
+      >
+        {children}
+      </Link>
+    )
+  }
+ // TODO: refactor to onClick so function prop can manage everything
+  if (href) {
+    return (
+      <Link 
+        href={href} 
         className={buttonClasses}
       >
         {children}

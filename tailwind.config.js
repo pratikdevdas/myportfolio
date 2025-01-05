@@ -19,7 +19,7 @@ module.exports = {
       lg: ["18px", "27px"],
       xl: ["20px", "28px"],
       "2xl": ["24px", "36px"],
-      "3xl": ["30px", "45px"],
+      "3xl": ["32px", "48px"],
       "4xl": ["36px", "54px"],
       "5xl": "48px",
       "6xl": ["54px", "67px"],

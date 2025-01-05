@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const Post = (props:any) => {;
   return (
-    <div className="h-full md:h-screen">
+    <div className="min-h-screen bg-dark-green-1000 ">
       <Navbar />
-      <div className="h-full bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-g700 via-g900 to-gblack pb-4 font-raleway text-light md:pb-0">
-        <div className="mx-auto max-w-[700px] lg:max-w-[1000px]   xl:max-w-[1100px]">
+      <div className="h-full pb-4 font-raleway text-light md:pb-0">
+        <div className="mx-auto max-w-[700px] px-4 lg:max-w-[1000px] xl:max-w-[1100px]">
           <div>
             <div className="flex w-full flex-col items-center justify-start pt-8 md:flex-row md:justify-between lg:py-20">
               <div className="mx-auto h-full flex-1 px-4 md:order-first md:px-6">
