@@ -5,6 +5,7 @@ import Footer from "../components/Layout/Footer";
 import Projects from "../components/Projects";
 import { promises as fsPromises } from "fs";
 import path from "path";
+import Tools from "../components/Layout/Tools";
 
 export default function Home(props: any) {
   return (
@@ -25,6 +26,7 @@ export default function Home(props: any) {
             <Navbar />
             <Hero />
             <Projects projects={props.projects} />
+            {/* <Tools/> */}
           </div>
         </div>
         <div className="mx-auto  max-w-[660px] lg:max-w-[900px]   xl:max-w-[1100px]">
