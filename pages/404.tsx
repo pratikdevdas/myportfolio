@@ -2,10 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import four from "../public/404.png";
 import Navbar from "../components/Layout/Navbar";
+import Head from "next/head";
 
 export default function Error() {
   return (
     <div className="h-screen overflow-hidden text-center">
+      <Head>
+        <title>404 - Page Not Found | Pratik Dev Das</title>
+        <meta name="description" content="The page you are looking for does not exist. Return to the homepage." />
+      </Head>
       <Navbar />
       <div className="flex h-full w-full flex-col items-center justify-center gap-10 bg-gradient-to-b from-black via-g900 to-g800 font-raleway">
         <Link
