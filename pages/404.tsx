@@ -29,9 +29,9 @@ export default function Error() {
         <div className="mx-auto max-w-[660px] px-4 py-8 md:py-12 lg:max-w-[900px] xl:max-w-[1184px]">
           <Navbar />
           <main className="font-dm-sans text-light">
-            <div className="mt-8 md:mt-12 flex flex-col items-center justify-center gap-8">
-              <div className="w-full max-w-[500px]">
-                <div className="relative overflow-hidden rounded-xl bg-dark-green-100 p-8">
+            <div className="mt-6 md:mt-8 md:mt-12 flex flex-col items-center justify-center gap-6 md:gap-8">
+              <div className="w-full max-w-[400px] md:max-w-[500px]">
+                <div className="relative overflow-hidden rounded-xl bg-dark-green-100 p-4 md:p-8">
                   <Image 
                     src={four} 
                     alt="404 Error" 
@@ -41,12 +41,16 @@ export default function Error() {
                 </div>
               </div>
 
-              <div className="text-center">
-                <h1 className="mb-6 text-3xl font-bold md:text-4xl text-dark-green-200">Page Not Found</h1>
-                <p className="mb-8 text-lg text-dark-green-300">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+              <div className="text-center px-4">
+                <h1 className="mb-4 md:mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-dark-green-200">
+                  Page Not Found
+                </h1>
+                <p className="mb-6 md:mb-8 text-base md:text-lg text-dark-green-300">
+                  The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+                </p>
                 
-                <Button onClick={handleBack}>
-                  <HomeIcon className="h-5 w-5" />
+                <Button onClick={handleBack} className="w-full sm:w-auto">
+                  <HomeIcon className="h-4 w-4 md:h-5 md:w-5" />
                   Take Me Back
                 </Button>
               </div>

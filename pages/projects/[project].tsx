@@ -84,31 +84,30 @@ const Post = ({
                 </div>
 
                 <div className="w-full md:w-1/2">
-                  <div className="space-y-4">
-                    <h1 className="text-3xl text-dark-green-50 md:text-4xl">
+                  <div className="space-y-3">
+                    <h1 className="text-2xl text-dark-green-50 md:text-3xl lg:text-4xl">
                       {title}
                     </h1>
-                    <p className="text-lg  text-dark-green-300">
+                    <p className="text-base md:text-lg text-dark-green-300">
                       {description}
                     </p>
 
-                      <ul className="flex flex-wrap gap-3 text-green">
-                        {stacks.map((tech, i) => (
-                          <li
-                            key={i}
-                            className="rounded-full bg-dark-green-900 px-3 py-1 text-sm"
-                          >
-                            {tech}
-                          </li>
-                        ))}
-                      </ul>
+                    <ul className="flex flex-wrap gap-2 md:gap-3 text-green">
+                      {stacks.map((tech, i) => (
+                        <li
+                          key={i}
+                          className="rounded-full bg-dark-green-900 px-2 py-1 md:px-3 text-xs md:text-sm"
+                        >
+                          {tech}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
-                  <div className="flex gap-6 mt-8">
+                  <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-6">
                     {url && (
-                      <Button href={url} openInNewTab={true}>
-                        View Live{" "}
-                        <ArrowUpOnSquareIcon className="h-4 w-4 rotate-45" />
+                      <Button href={url} openInNewTab={true} className="w-full sm:w-auto">
+                        View Live <ArrowUpOnSquareIcon className="h-4 w-4 rotate-45" />
                       </Button>
                     )}
                     {github && (
@@ -116,6 +115,7 @@ const Post = ({
                         variant="secondary"
                         href={github}
                         openInNewTab={true}
+                        className="w-full sm:w-auto"
                       >
                         View Code
                         <ArrowUpOnSquareIcon className="h-4 w-4 rotate-45" />
@@ -125,7 +125,7 @@ const Post = ({
                 </div>
               </div>
 
-              <nav className="mt-12 flex justify-between border-t border-dark-green-900 pt-8">
+              <nav className="mt-8 md:mt-12 flex justify-between border-t border-dark-green-900 pt-6 md:pt-8">
                 {prev ? (
                   <Link
                     className="flex items-center gap-2 text-green transition-colors hover:text-light"
