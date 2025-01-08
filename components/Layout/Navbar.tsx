@@ -17,14 +17,22 @@ function Navbar() {
           </div>
           <div className="hidden gap-8 md:flex">
             {["PROJECTS", "CONTACT"].map((item) => (
-              <a
+              <Link
                 key={item}
-                href={`#${item.toLowerCase()}`}
-                onClick={(e) => handleScroll(e, item.toLowerCase())}
+                href={`/#${item.toLowerCase()}`}
+                onClick={(e) => {
+                  if (window.location.pathname !== '/') {
+                    // If not on home page, let Link handle navigation
+                    return;
+                  }
+                  // If on home page, handle smooth scroll
+                  e.preventDefault();
+                  handleScroll(e, item.toLowerCase());
+                }}
                 className="text-base text-white transition-colors hover:text-dark-green-fluorescent"
               >
                 {item}
-              </a>
+              </Link>
             ))}
           </div>
         </nav>
