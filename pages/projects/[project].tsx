@@ -4,7 +4,7 @@ import { promises as fsPromises } from "fs";
 import path from "path";
 import Link from "next/link";
 import { useState } from "react";
-import Head from "next/head";
+import { NextSeo } from 'next-seo';
 import { GetStaticProps } from "next";
 
 interface Project {
@@ -26,13 +26,22 @@ const Post = ({ title, description, image, stacks, url, github, prev, next, id }
 
   return (
     <>
-      <Head>
-        <title>{title} | Project Details</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
-      </Head>
+      <NextSeo
+        title={`${title} | Project Details`}
+        description={description}
+        openGraph={{
+          title,
+          description,
+          images: [
+            {
+              url: image,
+              width: 800,
+              height: 600,
+              alt: `Screenshot of ${title} project`,
+            },
+          ],
+        }}
+      />
 
       <div className="min-h-screen bg-dark-green-1000">
         <Navbar />

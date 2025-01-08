@@ -6,18 +6,25 @@ import Projects from "../components/Projects";
 import { promises as fsPromises } from "fs";
 import path from "path";
 import Tools from "../components/Layout/Tools";
+import { NextSeo } from 'next-seo';
 
 export default function Home(props: any) {
   return (
     <div>
-      <Head>
-        <title>Pratik Dev Das - Portfolio</title>
-        <meta name="description" content="Explore the portfolio of Pratik Dev Das, showcasing web development projects and skills." />
-        <meta name="keywords" content="Pratik Dev Das, portfolio, web development, projects, skills" />
-        <meta name="author" content="Pratik Dev Das" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <NextSeo
+        title="Pratik Dev Das - Portfolio"
+        description="Explore the portfolio of Pratik Dev Das, showcasing web development projects and skills."
+        openGraph={{
+          images: [
+            {
+              url: 'https://www.pratikdevdas.com/og-image.jpg', // Add your OG image URL here
+              width: 1200,
+              height: 630,
+              alt: 'Pratik Dev Das Portfolio',
+            },
+          ],
+        }}
+      />
       <div className="bg-dark-green-1000 text-lg md:text-xl">
         <div className="bg-yellow-500 text-black py-2 px-4 text-center font-medium text-dark-green-100  ">
           <p>🚧 Under Construction</p>
