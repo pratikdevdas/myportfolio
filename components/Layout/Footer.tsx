@@ -30,9 +30,8 @@ function Footer() {
             <a
               key={href}
               href={href}
-              className="transform transition-transform hover:scale-110"
+              className="p-2 rounded-lg transform transition-all duration-300 hover:bg-dark-green-500 hover:scale-110 hover:shadow-lg hover:shadow-dark-green-400/20"
               target="_blank"
-
               rel="noopener noreferrer"
             >
               <Icon />

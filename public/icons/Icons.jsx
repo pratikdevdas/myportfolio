@@ -1,5 +1,5 @@
 export const Github = () => (
-  <svg width={48} height={48} fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width={32} height={32} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#a)" fill="#fff">
       <path
         fillRule="evenodd"
@@ -18,8 +18,9 @@ export const Github = () => (
 
 export const LinkedIn = (props) => (
   <svg
-    width={48}
-    height={48}
+    width={32}
+    height={32}
+    viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
@@ -40,8 +41,9 @@ export const LinkedIn = (props) => (
 
 export const Twitter = (props) => (
   <svg
-    width={48}
-    height={48}
+    width={32}
+    height={32}
+    viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
@@ -62,8 +64,9 @@ export const Twitter = (props) => (
 
 export const Youtube = (props) => (
   <svg
-    width={48}
-    height={48}
+    width={32}
+    height={32}
+    viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
