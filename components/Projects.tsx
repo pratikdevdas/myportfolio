@@ -19,6 +19,8 @@ const Projects = ({ projects }: ProjectsProps) => {
     threshold: 0.1
   });
 
+  const sortedProjects = [...projects].reverse();
+
   return (
     <section 
       ref={ref}
@@ -37,7 +39,7 @@ const Projects = ({ projects }: ProjectsProps) => {
       </div>
 
       <div className="grid grid-cols-1 gap-8 md:gap-[72px] lg:grid-cols-2 lg:grid-areas-projects">
-        {projects.map((project, index) => (
+        {sortedProjects.map((project, index) => (
           <div
             key={project.id}
             className={`project-item ${index % 2 === 0 ? "lg:area-project1" : "lg:area-project2"}`}
@@ -76,9 +78,13 @@ const Project = ({ project }: { project: Project }) => {
         />
       </div>
       <div className="space-y-3">
-        <p className="text-dark-green-50 text-xl font-dm-sans">{project.title}</p>
-        <p className="text-dark-green-200 text-sm">{project.description}</p>
+        <Link href={`/projects/${project.id}`}>
+          <p className="text-dark-green-50 text-xl hover:text-dark-green-100 duration-300 transition-all font-dm-sans">{project.title}</p>
+        </Link>
         <p className="text-dark-green-200 text-sm">
+          {project.description}
+        </p>
+        <p className="text-dark-green-200 text-sm hover:text-dark-green-50 duration-300 transition-all">
           <Link href={`/projects/${project.id}`}>
             Learn More &gt;
           </Link>
