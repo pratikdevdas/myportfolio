@@ -4,8 +4,8 @@ import Button from "../Button";
 
 function Footer() {
   return (
-    <div className="flex flex-col items-center justify-center py-12 ">
-      <h2 className="mb-3 text-center text-6xl text-dark-green-100">
+    <div className="flex flex-col items-center justify-center py-12 px-4">
+      <h2 className="mb-3 text-center text-3xl md:text-5xl lg:text-6xl text-dark-green-100">
         I like Cooking Code & <br /> Learning everyday.
       </h2>
       <div className="mt-4 space-y-4 flex flex-col gap-4">

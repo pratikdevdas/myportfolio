@@ -25,13 +25,13 @@ export default function Home(props: any) {
           ],
         }}
       />
-      <div className="bg-dark-green-1000 text-lg md:text-xl">
-        <div className="bg-yellow-500 text-black py-2 px-4 text-center font-medium text-dark-green-100  ">
+      <div className="bg-dark-green-1000 text-base md:text-lg lg:text-xl">
+        <div className="bg-yellow-500 text-black py-2 px-4 text-center font-medium text-dark-green-100">
           <p>🚧 Under Construction</p>
         </div>
 
         <div className="">
-          <div className="mx-auto py-12 max-w-[660px] lg:max-w-[900px] xl:max-w-[1184px]">
+          <div className="mx-auto py-8 md:py-12 px-4 max-w-[660px] lg:max-w-[900px] xl:max-w-[1184px]">
             <Navbar />
             <Hero />
             <div id="projects">

@@ -16,10 +16,10 @@ const Projects = ({ projects }: ProjectsProps) => {
   return (
     <section className="mx-auto max-w-[990px] px-6 py-16 lg:max-w-[1150px] lg:py-32">
       <div className="mb-16 text-center">
-        <h2 className="font-dm-sans mb-3 text-6xl text-dark-green-50">
+        <h2 className="font-dm-sans mb-3 text-3xl md:text-5xl lg:text-6xl text-dark-green-50">
           Projects
         </h2>
-        <p className="text-lg text-dark-green-200">
+        <p className="text-base md:text-lg text-dark-green-200">
           I like building & building a few projects when I have some time to
           spare
         </p>

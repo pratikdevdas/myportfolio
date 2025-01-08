@@ -6,13 +6,13 @@ import { ArrowUpOnSquareIcon } from "@heroicons/react/24/outline";
 
 const Hero = () => {
   return (
-    <section className="flex w-full flex-col max-w-5xl mx-auto items-center justify-between pb-8 pt-16 md:flex-row lg:py-20">
+    <section className="flex w-full flex-col max-w-5xl mx-auto items-center justify-between pb-8 pt-16 md:flex-row lg:py-20 px-4">
       <div className="flex flex-col">
         <div className="flex flex-col">
-          <h1 className="text-7xl max-w-xl mb-4 text-dark-green-50">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl max-w-xl mb-4 text-dark-green-50">
            I am Pratik, a Fullstack Engineer
           </h1>
-          <p className="text-lg text-dark-green-200 max-w-xl">
+          <p className="text-base md:text-lg text-dark-green-200 max-w-xl">
             Much of my interest lies towards learning how to build softwares and
             to explore new things in technology.
           </p>
@@ -24,12 +24,11 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-      <div className="flex flex-shrink-0 justify-center">
+      <div className="flex flex-shrink-0 justify-center mt-8 md:mt-0">
         <Image
           src={HeroImage}
           width={300}
           alt="Pratik's profile picture"
-          // className="mx-auto"
         />
       </div>
     </section>
