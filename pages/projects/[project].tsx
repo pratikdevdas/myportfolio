@@ -65,7 +65,7 @@ const Post = ({
           <main className="font-dm-sans text-light">
             <div className="mt-8 md:mt-12">
               <div className="flex w-full flex-col items-center justify-start gap-8 md:flex-row md:gap-12">
-                <div className="w-full max-w-[500px] md:w-1/2">
+                <div className="w-full max-w-[500px] md:w-1/2 opacity-0 animate-fade-in-left">
                   <div
                     className={`relative overflow-hidden rounded-xl shadow-lg ${
                       imageLoading ? "bg-gray-200 animate-pulse" : ""
@@ -83,7 +83,7 @@ const Post = ({
                   </div>
                 </div>
 
-                <div className="w-full md:w-1/2">
+                <div className="w-full md:w-1/2 opacity-0 animate-fade-in-right" style={{ animationDelay: '200ms' }}>
                   <div className="space-y-3">
                     <h1 className="text-2xl text-dark-green-50 md:text-3xl lg:text-4xl">
                       {title}
@@ -125,7 +125,7 @@ const Post = ({
                 </div>
               </div>
 
-              <nav className="mt-8 md:mt-12 flex justify-between border-t border-dark-green-900 pt-6 md:pt-8">
+              <nav className="mt-8 md:mt-12 flex justify-between border-t border-dark-green-900 pt-6 md:pt-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
                 {prev ? (
                   <Link
                     className="flex items-center gap-2 text-green transition-colors hover:text-light"
