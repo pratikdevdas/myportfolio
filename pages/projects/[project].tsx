@@ -62,7 +62,7 @@ const Post = ({
 
         <div className="mx-auto max-w-[660px] px-4 py-8 md:py-12 lg:max-w-[900px] xl:max-w-[1184px]">
           <Navbar />
-          <main className="font-raleway text-light">
+          <main className="font-dm-sans text-light">
             <div className="mt-8 md:mt-12">
               <div className="flex w-full flex-col items-center justify-start gap-8 md:flex-row md:gap-12">
                 <div className="w-full max-w-[500px] md:w-1/2">
@@ -84,26 +84,27 @@ const Post = ({
                 </div>
 
                 <div className="w-full md:w-1/2">
-                  <h1 className="mb-6 text-3xl font-bold md:text-4xl">
-                    {title}
-                  </h1>
-                  <p className="text-gray-300 mb-6 text-lg">{description}</p>
+                  <div className="space-y-4">
+                    <h1 className="text-3xl text-dark-green-50 md:text-4xl">
+                      {title}
+                    </h1>
+                    <p className="text-lg  text-dark-green-300">
+                      {description}
+                    </p>
 
-                  <div className="mb-8 text-green">
-                    <h2 className="mb-3 text-xl text-light">Technologies</h2>
-                    <ul className="flex flex-wrap gap-3">
-                      {stacks.map((tech, i) => (
-                        <li
-                          key={i}
-                          className="rounded-full bg-dark-green-900 px-3 py-1 text-sm"
-                        >
-                          {tech}
-                        </li>
-                      ))}
-                    </ul>
+                      <ul className="flex flex-wrap gap-3 text-green">
+                        {stacks.map((tech, i) => (
+                          <li
+                            key={i}
+                            className="rounded-full bg-dark-green-900 px-3 py-1 text-sm"
+                          >
+                            {tech}
+                          </li>
+                        ))}
+                      </ul>
                   </div>
 
-                  <div className="flex gap-6">
+                  <div className="flex gap-6 mt-8">
                     {url && (
                       <Button href={url} openInNewTab={true}>
                         View Live{" "}
@@ -117,6 +118,7 @@ const Post = ({
                         openInNewTab={true}
                       >
                         View Code
+                        <ArrowUpOnSquareIcon className="h-4 w-4 rotate-45" />
                       </Button>
                     )}
                   </div>
@@ -165,8 +167,6 @@ export async function getStaticPaths() {
   const paths = objectData.projects.map((p: any) => ({
     params: { project: p.id },
   }));
-
-  console.log(paths);
 
   return { paths, fallback: false };
 }
