@@ -56,18 +56,18 @@ const Post = ({
       />
 
       <div className="min-h-screen bg-dark-green-1000">
-        <div className="bg-yellow-500 text-black py-2 px-4 text-center font-medium text-dark-green-100">
+        <div className="bg-yellow-500 text-black px-4 py-2 text-center font-medium text-dark-green-100">
           <p>🚧 Under Construction</p>
         </div>
-        
-        <div className="mx-auto py-8 md:py-12 px-4 max-w-[660px] lg:max-w-[900px] xl:max-w-[1184px]">
+
+        <div className="mx-auto max-w-[660px] px-4 py-8 md:py-12 lg:max-w-[900px] xl:max-w-[1184px]">
           <Navbar />
           <main className="font-raleway text-light">
             <div className="mt-8 md:mt-12">
               <div className="flex w-full flex-col items-center justify-start gap-8 md:flex-row md:gap-12">
                 <div className="w-full max-w-[500px] md:w-1/2">
                   <div
-                    className={`relative rounded-xl overflow-hidden shadow-lg ${
+                    className={`relative overflow-hidden rounded-xl shadow-lg ${
                       imageLoading ? "bg-gray-200 animate-pulse" : ""
                     }`}
                   >
@@ -76,22 +76,27 @@ const Post = ({
                       height={400}
                       src={image}
                       alt={`Screenshot of ${title} project`}
-                      className="w-full h-auto"
+                      className="h-auto w-full"
                       onLoadingComplete={() => setImageLoading(false)}
                       priority
                     />
                   </div>
                 </div>
-                
+
                 <div className="w-full md:w-1/2">
-                  <h1 className="text-3xl md:text-4xl font-bold mb-6">{title}</h1>
-                  <p className="text-lg text-gray-300 mb-6">{description}</p>
-                  
-                  <div className="text-green mb-8">
-                    <h2 className="text-xl mb-3 text-light">Technologies</h2>
+                  <h1 className="mb-6 text-3xl font-bold md:text-4xl">
+                    {title}
+                  </h1>
+                  <p className="text-gray-300 mb-6 text-lg">{description}</p>
+
+                  <div className="mb-8 text-green">
+                    <h2 className="mb-3 text-xl text-light">Technologies</h2>
                     <ul className="flex flex-wrap gap-3">
                       {stacks.map((tech, i) => (
-                        <li key={i} className="bg-dark-green-900 px-3 py-1 rounded-full text-sm">
+                        <li
+                          key={i}
+                          className="rounded-full bg-dark-green-900 px-3 py-1 text-sm"
+                        >
                           {tech}
                         </li>
                       ))}
@@ -101,11 +106,16 @@ const Post = ({
                   <div className="flex gap-6">
                     {url && (
                       <Button href={url} openInNewTab={true}>
-                        View Live <ArrowUpOnSquareIcon className="w-4 h-4 rotate-45" />
+                        View Live{" "}
+                        <ArrowUpOnSquareIcon className="h-4 w-4 rotate-45" />
                       </Button>
                     )}
                     {github && (
-                      <Button variant="secondary" href={github} openInNewTab={true}>
+                      <Button
+                        variant="secondary"
+                        href={github}
+                        openInNewTab={true}
+                      >
                         View Code
                       </Button>
                     )}
@@ -116,7 +126,7 @@ const Post = ({
               <nav className="mt-12 flex justify-between border-t border-dark-green-900 pt-8">
                 {prev ? (
                   <Link
-                    className="flex items-center gap-2 text-green hover:text-light transition-colors"
+                    className="flex items-center gap-2 text-green transition-colors hover:text-light"
                     href={`/projects/${prev}`}
                     aria-label="Go to previous project"
                   >
@@ -127,7 +137,7 @@ const Post = ({
                 )}
                 {next ? (
                   <Link
-                    className="flex items-center gap-2 text-green hover:text-light transition-colors"
+                    className="flex items-center gap-2 text-green transition-colors hover:text-light"
                     href={`/projects/${next}`}
                     aria-label="Go to next project"
                   >
@@ -153,8 +163,10 @@ export async function getStaticPaths() {
   const objectData = JSON.parse(jsonData as any);
 
   const paths = objectData.projects.map((p: any) => ({
-    params: { project: p.id.toString().toLowerCase() },
+    params: { project: p.id },
   }));
+
+  console.log(paths);
 
   return { paths, fallback: false };
 }
