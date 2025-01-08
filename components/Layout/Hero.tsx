@@ -3,10 +3,21 @@ import Image from "next/image";
 import HeroImage from "../../public/images/PorfolioHeroV2.png";
 import Button from "../Button";
 import { ArrowUpOnSquareIcon } from "@heroicons/react/24/outline";
+import { useInView } from 'react-intersection-observer';
 
 const Hero = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1
+  });
+
   return (
-    <section className="flex w-full flex-col max-w-5xl mx-auto items-center justify-between pb-8 pt-16 md:flex-row lg:py-20 px-4">
+    <section 
+      ref={ref}
+      className={`flex w-full flex-col max-w-5xl mx-auto items-center justify-between pb-8 pt-16 md:flex-row lg:py-20 px-4 opacity-0 ${
+        inView ? 'animate-fade-in-up' : ''
+      }`}
+    >
       <div className="flex flex-col">
         <div className="flex flex-col">
           <h1 className="text-4xl md:text-6xl lg:text-7xl max-w-xl mb-4 text-dark-green-50">

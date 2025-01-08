@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useInView } from 'react-intersection-observer';
 
 interface Project {
   id: string;
@@ -13,8 +14,18 @@ interface ProjectsProps {
 }
 
 const Projects = ({ projects }: ProjectsProps) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1
+  });
+
   return (
-    <section className="mx-auto max-w-[990px] px-6 py-16 lg:max-w-[1150px] lg:py-32">
+    <section 
+      ref={ref}
+      className={`mx-auto max-w-[990px] px-6 py-16 lg:max-w-[1150px] lg:py-32 opacity-0 ${
+        inView ? 'animate-fade-in-up' : ''
+      }`}
+    >
       <div className="mb-16 text-center">
         <h2 className="font-dm-sans mb-3 text-3xl md:text-5xl lg:text-6xl text-dark-green-50">
           Projects
@@ -42,8 +53,18 @@ const Projects = ({ projects }: ProjectsProps) => {
 export default Projects;
 
 const Project = ({ project }: { project: Project }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1
+  });
+
   return (
-    <div className="space-y-6">
+    <div 
+      ref={ref}
+      className={`space-y-6 opacity-0 ${
+        inView ? 'animate-fade-in-up' : ''
+      }`}
+    >
       <div className="p-12 bg-dark-green-950 rounded-lg">
         <Image
           className="rounded-lg"
