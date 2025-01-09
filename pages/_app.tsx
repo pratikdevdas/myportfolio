@@ -26,7 +26,7 @@ const DEFAULT_SEO = {
   additionalMetaTags: [
     {
       name: 'keywords',
-      content: 'Pratik Dev Das, web developer, portfolio, projects'
+      content: 'Pratik Dev Das, web developer, portfolio, projects, ai, ui, product, design, engineering'
     },
     {
       name: 'author',
