@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hi there, I am Pratik Dev Das 👋
 
-## Getting Started
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/pratikdevdas/)
+[![Website Badge](https://img.shields.io/badge/Website-Visit-blue)](http://www.pratikdevdas.com)
 
-First, run the development server:
+Welcome to my GitHub profile! I like developing Saas.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 🚀 Languages and Tools:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p>
+  <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
+  <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png">
+  <img height="20" src="https://raw.githubusercontent.com/github/explore/5c058a388828bb5fde0bcafd4bc867b5bb3f26f3/topics/graphql/graphql.png">
+  <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png">
+</p>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 📊 Wakatime Stats
+[![wakatime](https://wakatime.com/badge/user/52d1c647-d52a-4125-88c1-403caaa2c2e8.svg)](https://wakatime.com/@52d1c647-d52a-4125-88c1-403caaa2c2e8)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 📫 Contact Me
+- Website: [pratikdevdas.com](http://www.pratikdevdas.com)
+- Email: [dasdev.pratik@gmail.com](mailto:dasdev.pratik@gmail.com)
+- LinkedIn: [linkedin.com/in/pratikdevdas](https://www.linkedin.com/in/pratikdevdas/)
 
-## Learn More
+Feel free to reach out if you have any questions or want to collaborate on a project!
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+⭐️ From [Pratik Dev Das](http://www.pratikdevdas.com)
