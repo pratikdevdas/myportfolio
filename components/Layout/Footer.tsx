@@ -13,7 +13,7 @@ function Footer() {
           <Button href="https://drive.google.com/file/d/1Y0uBj5ORuLn9L7YK6JRHgf2696IIar9Y/view">
             Resume <ArrowUpOnSquareIcon className="h-4 w-4 rotate-45" />
           </Button>
-          <Button variant="secondary" href="mailto:pratikdevdas@gmail.com">
+          <Button variant="secondary" href="mailto:pratikdevdas@outlook.com">
             Email <ArrowUpOnSquareIcon className="h-4 w-4 rotate-45" />
           </Button>
         </div>
