@@ -7,6 +7,7 @@ import { promises as fsPromises } from "fs";
 import path from "path";
 import Tools from "../components/Layout/Tools";
 import { NextSeo } from 'next-seo';
+import Stacks from "../components/Layout/Stacks";
 
 export default function Home(props: any) {
   return (
@@ -40,6 +41,7 @@ export default function Home(props: any) {
             {/* <Tools/> */}
           </div>
         </div>
+        <Stacks />
         <div id="contact" className="mx-auto max-w-[660px] lg:max-w-[900px] xl:max-w-[1100px]">
           <Footer />
         </div>
