@@ -43,7 +43,7 @@ export default function Error() {
 
               <div className="text-center opacity-0 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
                 <h1 className="mb-6 text-3xl font-bold md:text-4xl">Page Not Found</h1>
-                <p className="text-gray-300 mb-8 text-lg">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+                <p className="text-base lg:text-lg leading-7 md:leading-8 lg:leading-9 text-dark-green-200 max-w-xl mb-8">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
                 
                 <Button onClick={handleBack}>
                   <HomeIcon className="h-5 w-5" />

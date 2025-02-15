@@ -26,12 +26,8 @@ export default function Home(props: any) {
         }}
       />
       <div className="bg-dark-green-1000 text-base md:text-lg lg:text-xl">
-        <div className="bg-yellow-500 text-black py-2 px-4 text-center font-medium text-dark-green-100">
-          <p>🚧 Under Construction</p>
-        </div>
-
         <div className="">
-          <div className="mx-auto py-8 md:py-12 px-4 max-w-[660px] lg:max-w-[900px] xl:max-w-[1184px]">
+          <div className="mx-auto py-8 md:py-12 px-4 max-w-4xl lg:max-w-5xl xl:max-w-[1184px]">
             <Navbar />
             <Hero />
             <div id="projects">
@@ -44,7 +40,7 @@ export default function Home(props: any) {
           <Footer />
         </div>
         <div className="flex justify-center border-t-2 border-t-g700  text-center text-lg text-light md:text-xl">
-          <p className="py-3">
+          <p className="py-3 text-base lg:text-lg leading-7 md:leading-8 lg:leading-9 text-dark-green-200 max-w-xl">
             Made with ❤️ by{" "}
             <a
               href="https://www.pratikdevdas.com"

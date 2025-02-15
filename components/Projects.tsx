@@ -32,7 +32,7 @@ const Projects = ({ projects }: ProjectsProps) => {
         <h2 className="font-dm-sans mb-3 text-3xl md:text-5xl lg:text-6xl text-dark-green-50">
           Projects
         </h2>
-        <p className="text-base md:text-lg text-dark-green-200">
+        <p className="text-base lg:text-lg leading-7 md:leading-8 lg:leading-9 text-dark-green-200">
           I like building & building a few projects when I have some time to
           spare
         </p>
@@ -61,35 +61,36 @@ const Project = ({ project }: { project: Project }) => {
   });
 
   return (
-    <div 
-      ref={ref}
-      className={`space-y-6 opacity-0 ${
-        inView ? 'animate-fade-in-up' : ''
-      }`}
+    <Link 
+      href={`/projects/${project.id}`}
+      className="block"
     >
-      <div className="p-12 bg-dark-green-950 rounded-lg">
-        <Image
-          className="rounded-lg"
-          width={460}
-          height={340}
-          src={project.image}
-          alt={`${project.title} preview`}
-          priority
-        />
-      </div>
-      <div className="space-y-3">
-        <Link href={`/projects/${project.id}`}>
+      <div 
+        ref={ref}
+        className={`space-y-6 opacity-0 transition-all duration-300 hover:translate-y-[-8px] ${
+          inView ? 'animate-fade-in-up' : ''
+        }`}
+      >
+        <div className="p-12 bg-dark-green-950 rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-lg">
+          <Image
+            className="rounded-lg transform transition-transform duration-500 group-hover:scale-105"
+            width={460}
+            height={340}
+            src={project.image}
+            alt={`${project.title} preview`}
+            priority
+          />
+        </div>
+        <div className="space-y-3">
           <p className="text-dark-green-50 text-xl hover:text-dark-green-100 duration-300 transition-all font-dm-sans">{project.title}</p>
-        </Link>
-        <p className="text-dark-green-200 text-sm">
-          {project.description}
-        </p>
-        <p className="text-dark-green-200 text-sm hover:text-dark-green-50 duration-300 transition-all">
-          <Link href={`/projects/${project.id}`}>
+          <p className="text-dark-green-200 text-sm">
+            {project.description}
+          </p>
+          <p className="text-dark-green-200 text-sm hover:text-dark-green-50 duration-300 transition-all">
             Learn More &gt;
-          </Link>
-        </p>
+          </p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };

@@ -56,10 +56,6 @@ const Post = ({
       />
 
       <div className="min-h-screen bg-dark-green-1000">
-        <div className="bg-yellow-500 text-black px-4 py-2 text-center font-medium text-dark-green-100">
-          <p>🚧 Under Construction</p>
-        </div>
-
         <div className="mx-auto max-w-[660px] px-4 py-8 md:py-12 lg:max-w-[900px] xl:max-w-[1184px]">
           <Navbar />
           <main className="font-dm-sans text-light">
@@ -88,7 +84,7 @@ const Post = ({
                     <h1 className="text-2xl text-dark-green-50 md:text-3xl lg:text-4xl">
                       {title}
                     </h1>
-                    <p className="text-base md:text-lg text-dark-green-300">
+                    <p className="text-base lg:text-lg leading-7 md:leading-8 lg:leading-9 text-dark-green-200 max-w-xl">
                       {description}
                     </p>
 
