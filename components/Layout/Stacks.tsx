@@ -66,10 +66,9 @@ export default function Stacks() {
   }
 
   return (
-    <div className="relative flex items-center justify-center h-screen text-white text-center bg-gradient-to-b from-[#7fa18e] to-[#0d0f0e]">
+    <div className="relative flex items-center justify-center h-[780px] text-white text-center bg-gradient-to-b from-[#539284] to-[#0F1518]/0">
       {/* Pattern Overlay */}
-      <div className="absolute inset-0  bg-cover opacity-20"></div>
-      <Image src="/images/Stacks_bg.png" alt="Stacks Background" fill className="object-cover" />
+      <Image src="/images/Stacks_Background.svg" alt="Stacks Background" fill className="object-cover" />
 
       <div className="relative w-full max-w-6xl mx-auto p-4 md:p-8">
         <div className="relative min-w-[768px]">
