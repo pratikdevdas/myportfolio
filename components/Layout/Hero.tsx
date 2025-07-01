@@ -37,7 +37,7 @@ const Hero = () => {
           <p className="text-base lg:text-lg leading-7 md:leading-8 lg:leading-9 text-dark-green-200 max-w-xl">
             Much of my interest lies towards learning how to build softwares and
             to explore new things in technology. While my primary focus is on building web applications, I go beyond the web to tinker with devops, cloud and AI.
-            <br /> I am currently working as a Software Engineer at <a href="https://www.slidesai.io/" className="text-green hover:text-light">SlidesAI</a> where I build scalable and efficient web applications using React, TypeScript, Cloudflare serverless architecture, and Langchain.
+            <br /> I am currently working as a Software Engineer at <a href="https://www.slidesai.io/" target="_blank" className="text-green hover:text-light">SlidesAI</a> where I build scalable and efficient web applications using React, TypeScript, Cloudflare serverless architecture, and Langchain.
           </p>
         </div>
         <div className="flex gap-4 mt-8">
