@@ -17,7 +17,7 @@ export default function Home(props: any) {
         openGraph={{
           images: [
             {
-              url: 'https://www.pratikdevdas.com/og-image.jpg', // Add your OG image URL here
+              url: 'https://www.pratikdevdas.com/opengraph-image.webp', // Add your OG image URL here
               width: 1200,
               height: 630,
               alt: 'Pratik Dev Das Portfolio',
