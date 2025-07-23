@@ -10,7 +10,7 @@ function Footer() {
       </h2>
       <div className="mt-4 space-y-4 flex flex-col gap-4">
         <div className="flex gap-4">
-          <Button href="https://drive.google.com/file/d/1Y0uBj5ORuLn9L7YK6JRHgf2696IIar9Y/view">
+          <Button href="https://drive.google.com/file/d/1zd-m-Gy_X3mlFhm-1-qtuf7sC3aYaTeR/view?usp=sharing" openInNewTab={true}>
             Resume <ArrowUpOnSquareIcon className="h-4 w-4 rotate-45" />
           </Button>
           <Button variant="secondary" href="mailto:pratikdevdas@outlook.com">

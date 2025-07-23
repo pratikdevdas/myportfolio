@@ -41,7 +41,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="flex gap-4 mt-8">
-          <Button href="https://drive.google.com/file/d/1Y0uBj5ORuLn9L7YK6JRHgf2696IIar9Y/view" openInNewTab={true}>Resume <ArrowUpOnSquareIcon className="w-4 h-4 rotate-45" /></Button>
+          <Button href="https://drive.google.com/file/d/1zd-m-Gy_X3mlFhm-1-qtuf7sC3aYaTeR/view?usp=sharing" openInNewTab={true}>Resume <ArrowUpOnSquareIcon className="w-4 h-4 rotate-45" /></Button>
           <Button variant="secondary" href="#contact">
             Contact
           </Button>
