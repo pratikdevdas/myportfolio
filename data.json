@@ -5,59 +5,47 @@
             "index": 0,
             "title": "Rest Country Display",
             "description": "Displaying all the countries with help of rest country api. I made this project to learn basic react hook & scss 7-in-1 architecture.",		
-			"image":"/images/restproject.png",
+			"image":"/images/rest-api-countries.webp",
             "url":"https://rest-countries-api-with-color-theme-switcher-master-lac.vercel.app/",
             "github": "https://github.com/pratikdevdas/rest-countries-api-with-color-theme-switcher-master",
             "stacks":["react","scss"],
-            "prev": "movieproj"
+            "prev": "letterioproj"
 
         },
         {
-            "id": "movieproj",
-            "index": 1,
-            "title": "Movie Manager",
-            "description": "A Movie listing web app with sharing wishlist feature. I made this to learn Remix and styled-components.",
-			"image":"/images/movieproj.png",
-            "url":"https://fetchmovie-remix.vercel.app/",
-            "github": "https://github.com/pratikdevdas/fetchmovie-remix",
-            "stacks":["react","remix", "styledComponents", "radixUi", "redis(upstash)"],
-            "next": "restproject",
-            "prev": "letterioproj"
-        },
-        {
             "id": "letterioproj",
-            "index": 2,
+            "index": 1,
             "title": "Letterio",
             "description": "Browse and Send anonymous letters with ease on this website. I was trying out some light weight js and this was the end result.",
-			"image":"/images/letterioproject.webp",
-            "url":"https://letterio.pratikdevdas.com/",
+			"image":"/images/letterio.webp",
+            "url":"https://willowy-daifuku-578167.netlify.app/",
             "github": "https://github.com/pratikdevdas/letterio",
             "stacks":["html","css", "javascript", "quilljs", "json-server"],
+            "prev": "product-designer-portfolio",
+            "next": "restproject"
+        },
+        {
+            "id": "product-designer-portfolio",
+            "index": 2,
+            "title": "Product Designer Portfolio",
+            "description": "A portfolio for a product designer to showcase their work. I made this project to learn about nextjs and tailwindcss.",
+			"image":"/images/portfolio-product-designer.webp",
+            "url":"https://portfolio-product-designer-pied.vercel.app/",
+            "github":"https://github.com/pratikdevdas/portfolio-product-designer",
+            "stacks":["nextJs", "tailwindcss", "typescript"],
             "prev": "emailClassify",
-            "next": "movieproj"
+            "next": "letterioproj"
         },
         {
             "id": "emailClassify",
             "index": 3,
             "title": "Classify Email",
             "description": "Use GPT-4o to classify your gmail emails and filter them accordingly. I made this project to learn about GPT4o and gmail api. You will have to use your own open ai api key to access the app.",
-			"image":"/images/email-classify.webp",
+			"image":"/images/email-classfier.webp",
             "url":"https://email-classifier-iota.vercel.app/",
-            "github":"/",
+            "github":"https://github.com/pratikdevdas/email-classifier",
             "stacks":["nextJs", "langchain", "tanstack query", "gmail api", "google oauth"],
-            "prev": "invoice-app",
-            "next": "letterioproj"
-        },
-        {
-            "id": "invoice-app",
-            "index": 4,
-            "title": "Optician's Invoice",
-            "description": "A invoice app for any optician to generate order, invoice, prescription and send it to customers.",
-			"image":"/images/invoice.webp",
-            "url":"https://invoice-client-gilt.vercel.app/",
-            "github": "https://github.com/pratikdevdas/invoice-gst-frontend-mentor",
-            "stacks":["react","redux", "rtk query", "mongoDB", "express"],
-            "next": "emailClassify"
+            "next": "product-designer-portfolio"
         }
     ]
 }
