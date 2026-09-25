@@ -102,7 +102,7 @@ body {
   grid-template-columns: minmax(0, 1.8fr) minmax(210px, 1fr);
   gap: 44px;
   align-items: center;
-  padding: 80px 0 88px;
+  padding: 72px 0;
 }
 .eyebrow {
   font-family: ui-monospace, monospace;
@@ -164,17 +164,23 @@ body {
   font-size: 13px;
   min-height: 36px;
 }
-.hero .current-work {
-  margin-top: 22px;
-  font-size: 12px;
+.hero-intro {
+  font-size: 20px;
   color: var(--muted);
 }
-.current-work a {
+.site .hero h1 {
+  font-size: clamp(36px, 4.5vw, 52px);
+  margin: 12px 0 24px;
+  max-width: 600px;
+}
+.hero-description a {
   color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .portrait {
   width: 100%;
-  max-width: 280px;
+  max-width: 240px;
   height: auto;
   justify-self: end;
 }
@@ -309,16 +315,12 @@ body {
 .footer-main {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   flex-wrap: wrap;
   gap: 26px;
 }
-.site .writing-section h2,
-.site .site-footer h2 {
+.site .writing-section h2 {
   font-size: 24px;
-}
-.site-footer h2 {
-  margin-bottom: 12px;
 }
 .site .contact-email {
   display: inline-block;
@@ -332,7 +334,7 @@ body {
 .site-footer nav {
   color: var(--muted);
   gap: 19px;
-  padding-top: 8px;
+  padding-top: 0;
 }
 .footer-bottom {
   display: flex;
@@ -342,11 +344,6 @@ body {
   color: var(--muted);
   font-size: 11px;
   padding-top: 30px;
-}
-.footer-bottom a {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
 }
 .page-heading {
   padding: 55px 0 38px;

@@ -49,7 +49,11 @@ export default function Projects({
   return (
     <div className="project-grid">
       {projects.map((project) => (
-        <article className="project-card" key={project.id}>
+        <article
+          className="project-card"
+          key={project.id}
+          data-project={project.id}
+        >
           <Link
             className="project-card-link"
             href={`/projects/${project.id}`}

@@ -68,3 +68,24 @@ test("invalid publication dates fail the build with the filename", async (t) => 
   await writeFile(path.join(dir, "invalid.md"), post("2026-02-30"));
   await assert.rejects(() => readPosts(dir, now), /invalid\.md.*date/i);
 });
+
+test("published Markdown links retain their destinations with outbound attribution", async (t) => {
+  const dir = await fixture(t);
+  await writeFile(
+    path.join(dir, "links.md"),
+    post(
+      "2026-09-24",
+      "false",
+      "[Watch](https://example.com/watch?v=demo#clip)\n[Work](/projects)\n[Reference][ref]\n\n[ref]: https://agentcomics.com"
+    )
+  );
+  const result = await readPost("links", dir, now);
+  assert.ok(result);
+  assert.match(result.html, /v=demo&#x26;utm_source=pratikdevdas.com/);
+  assert.match(result.html, /utm_content=blog_links#clip/);
+  assert.match(result.html, /href="\/projects"/);
+  assert.match(
+    result.html,
+    /https:\/\/agentcomics.com\/\?utm_source=pratikdevdas.com/
+  );
+});

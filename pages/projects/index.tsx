@@ -18,7 +18,11 @@ export default function AllProjects() {
           life.
         </p>
       </header>
-      <section className="projects-page" aria-label="All projects">
+      <section
+        className="projects-page"
+        aria-label="All projects"
+        data-track-placement="all_projects"
+      >
         <Projects projects={projects} headingLevel={2} />
       </section>
     </SiteLayout>

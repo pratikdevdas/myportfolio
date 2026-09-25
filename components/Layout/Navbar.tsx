@@ -1,9 +1,10 @@
+import { contactHref } from "../../lib/links";
 import Link from "next/link";
 import { useRouter } from "next/router";
 export default function Navbar() {
   const { pathname } = useRouter();
   return (
-    <header className="site-header">
+    <header className="site-header" data-track-placement="navigation">
       <Link className="wordmark" href="/">
         Pratik Dev Das<span>.</span>
       </Link>
@@ -23,7 +24,7 @@ export default function Navbar() {
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
           Resume
         </a>
-        <Link href="/#contact">Contact</Link>
+        <a href={contactHref}>Contact</a>
       </nav>
     </header>
   );

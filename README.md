@@ -22,7 +22,7 @@ Development runs at http://localhost:6969. The build also regenerates the sitema
 
 The public file is **`public/resume.pdf`**, available at **`/resume.pdf`** after
 deployment. All resume buttons point there. Replace that PDF and commit it to keep
-the URL stable. Visitors can view it in their browser or use the footer download.
+the URL stable. The Resume navigation link opens it in the browser, where visitors can download it.
 
 The editable source for the current PDF is `scripts/build-resume.py`. To update it:
 
@@ -54,7 +54,8 @@ The filename becomes `/blog/building-agent-comics`. Drafts, posts without an exp
 `draft: false`, and future-dated posts are excluded from listings, routes and sitemap.
 Dates are interpreted in UTC. Future posts require a new build on or after their
 publication date; this is not an automatic scheduling service. Raw HTML is sanitized.
-The starter template is deliberately unpublished.
+The starter template is deliberately unpublished. The homepage Writing section
+appears once at least one post is published; the Blog navigation link is always available.
 
 ## Projects
 
@@ -68,3 +69,37 @@ page links to the working Sites preview and walkthrough. The unavailable custom
 domain is not linked; update the project URL once it is live.
 
 The design and scope are recorded in `docs/portfolio-refresh.md`.
+
+## Contact and attribution
+
+Contact in the navigation and the footer email use the same prefilled `mailto:`
+link from `lib/links.ts`. It opens the visitor's configured mail handler (including
+Gmail when registered as that handler); it does not send anything automatically.
+The draft has subject "Let's work together" and a short project/opportunity prompt.
+
+External website, app, source, video, social and Markdown article links carry:
+
+- `utm_source=pratikdevdas.com`
+- `utm_medium=referral`
+- `utm_campaign=portfolio`
+- `utm_content=<project/action or placement>`, such as `agent-comics_website`
+
+Existing destination query parameters and fragments are preserved. Internal links,
+email links and the resume PDF URL stay untagged to avoid resetting attribution.
+Use the destination site's acquisition/campaign analytics to inspect these UTMs;
+third-party sites may ignore them. Portfolio click counts are recorded independently.
+
+In the existing Simple Analytics account, select the portfolio and open **Events
+Explorer**. Inspect `outbound_click`, `project_open`, `contact_click`, `resume_open`
+and `navigation_click`. Filter metadata by `placement` (navigation, hero, footer,
+home_projects, all_projects, project_detail), `project`, or `destination`.
+Contact events contain only placement; no draft content is collected. Other click
+events omit query strings and fragments. A click records intent, not a sent email,
+app install or completed download. Custom events run only on `pratikdevdas.com`
+and `www.pratikdevdas.com`, so local/Vercel previews do not add test events.
+
+Early clicks queue until the analytics script loads. Link navigation does not wait
+for analytics and continues if the script is blocked. Validate real event delivery
+in Events Explorer after deployment; automated checks cover construction and dispatch.
+
+Reference: https://docs.simpleanalytics.com/events and https://docs.simpleanalytics.com/metadata.
