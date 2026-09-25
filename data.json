@@ -1,51 +1,132 @@
 {
-    "projects": [
-        {
-            "id": "restproject",
-            "index": 0,
-            "title": "Rest Country Display",
-            "description": "Displaying all the countries with help of rest country api. I made this project to learn basic react hook & scss 7-in-1 architecture.",		
-			"image":"/images/rest-api-countries.webp",
-            "url":"https://rest-countries-api-with-color-theme-switcher-master-lac.vercel.app/",
-            "github": "https://github.com/pratikdevdas/rest-countries-api-with-color-theme-switcher-master",
-            "stacks":["react","scss"],
-            "prev": "letterioproj"
-
-        },
-        {
-            "id": "letterioproj",
-            "index": 1,
-            "title": "Letterio",
-            "description": "Browse and Send anonymous letters with ease on this website. I was trying out some light weight js and this was the end result.",
-			"image":"/images/letterio.webp",
-            "url":"https://willowy-daifuku-578167.netlify.app/",
-            "github": "https://github.com/pratikdevdas/letterio",
-            "stacks":["html","css", "javascript", "quilljs", "json-server"],
-            "prev": "product-designer-portfolio",
-            "next": "restproject"
-        },
-        {
-            "id": "product-designer-portfolio",
-            "index": 2,
-            "title": "Product Designer Portfolio",
-            "description": "A portfolio for a product designer to showcase their work. I made this project to learn about nextjs and tailwindcss.",
-			"image":"/images/portfolio-product-designer.webp",
-            "url":"https://portfolio-product-designer-pied.vercel.app/",
-            "github":"https://github.com/pratikdevdas/portfolio-product-designer",
-            "stacks":["nextJs", "tailwindcss", "typescript"],
-            "prev": "emailClassify",
-            "next": "letterioproj"
-        },
-        {
-            "id": "emailClassify",
-            "index": 3,
-            "title": "Classify Email",
-            "description": "Use GPT-4o to classify your gmail emails and filter them accordingly. I made this project to learn about GPT4o and gmail api. You will have to use your own open ai api key to access the app.",
-			"image":"/images/email-classfier.webp",
-            "url":"https://email-classifier-iota.vercel.app/",
-            "github":"https://github.com/pratikdevdas/email-classifier",
-            "stacks":["nextJs", "langchain", "tanstack query", "gmail api", "google oauth"],
-            "next": "product-designer-portfolio"
-        }
-    ]
+  "projects": [
+    {
+      "id": "agent-comics",
+      "title": "Agent Comics",
+      "description": "An idea becomes a story. A story becomes a comic.",
+      "overview": "An AI comic-making product that guides people from an initial pitch through story planning and full-page artwork. Users can review the proposed characters and story before generation.",
+      "features": [
+        "An agent helps shape a story idea into characters, beats and pages.",
+        "Review and edit the story plan before the artwork is generated.",
+        "Character references support consistency across comic pages.",
+        "Download completed pages from the iPhone and iPad app."
+      ],
+      "focus": "Generative AI · Story planning · Sequential art",
+      "kind": "Independent product · iOS app and website",
+      "category": "AI storytelling · iPhone & iPad",
+      "stacks": [
+        "Guided planning, character references, image generation, downloadable comic pages"
+      ],
+      "image": "/images/agent-comics-page.webp",
+      "imageAlt": "A generated Agent Comics page",
+      "url": "https://agentcomics.com",
+      "secondaryImage": "/images/agent-comics-app.webp",
+      "secondaryImageAlt": "Comic Studio iPhone app",
+      "appUrl": "https://apps.apple.com/us/app/comic-studio-ai-comic-maker/id6799505824"
+    },
+    {
+      "id": "garden-home",
+      "title": "Garden Home",
+      "description": "A sense of place, before it exists.",
+      "overview": "A conceptual residential study developed from an approved ground-floor plan. The project explores furnished interiors, materials, light and room relationships through still images and films.",
+      "features": [
+        "Six interior views rendered in Blender Cycles, available in 4K.",
+        "Unreal Engine views for comparing lighting and material treatments.",
+        "A 90-second cinematic film introducing the home.",
+        "A continuous walkthrough of the furnished ground floor and schematic garden."
+      ],
+      "focus": "Materials · Lighting · Composition · Camera movement",
+      "kind": "Independent visualization study · Stills and films",
+      "category": "Architectural visualization · Blender & Unreal Engine",
+      "stacks": ["Blender Cycles", "Unreal Engine"],
+      "image": "/images/garden-home.webp",
+      "imageAlt": "Garden Home living and dining space rendered in Blender Cycles",
+      "url": "https://garden-home.pratikdevdas.com",
+      "videoUrl": "https://www.youtube.com/watch?v=3ietQpQrR04",
+      "previewUrl": "https://garden-home.stuticodes.chatgpt.site/"
+    },
+    {
+      "id": "emailClassify",
+      "title": "Email Classifier",
+      "description": "A clearer inbox, with a little help from AI.",
+      "overview": "A web application that connects to Gmail with OAuth and categorizes messages using GPT-4o mini. The interface was designed in Figma and built with Next.js and Tailwind.",
+      "features": [
+        "Connect a Gmail account using OAuth.",
+        "Categorize emails as important, promotional, spam and other useful groups.",
+        "Chain prompts and processing steps with LangChain.",
+        "Inspect LLM behavior with LangSmith observability."
+      ],
+      "focus": "AI integration · Authentication · Interface design",
+      "kind": "Independent web application",
+      "category": "AI application · Email organization",
+      "stacks": [
+        "Next.js",
+        "Tailwind",
+        "Gmail API",
+        "OAuth",
+        "GPT-4o mini",
+        "LangChain",
+        "LangSmith",
+        "Figma"
+      ],
+      "image": "/images/email-classfier.webp",
+      "imageAlt": "Email Classifier interface",
+      "url": "https://email-classifier-iota.vercel.app/",
+      "github": "https://github.com/pratikdevdas/email-classifier"
+    },
+    {
+      "id": "product-designer-portfolio",
+      "title": "Product Designer Portfolio",
+      "description": "A place for a product designer’s work to stand out.",
+      "overview": "A portfolio website for presenting product design work, built while exploring Next.js, TypeScript and Tailwind CSS.",
+      "features": [
+        "A visual presentation of the designer and their work.",
+        "Project imagery and descriptions organized in a portfolio layout."
+      ],
+      "focus": "Frontend development · Visual presentation",
+      "kind": "Independent web project",
+      "category": "Web development · Portfolio",
+      "stacks": ["Next.js", "TypeScript", "Tailwind CSS"],
+      "image": "/images/portfolio-product-designer.webp",
+      "imageAlt": "Product Designer Portfolio interface",
+      "url": "https://portfolio-product-designer-pied.vercel.app/",
+      "github": "https://github.com/pratikdevdas/portfolio-product-designer"
+    },
+    {
+      "id": "letterioproj",
+      "title": "Letterio",
+      "description": "A small space for words worth sharing.",
+      "overview": "A lightweight website for browsing and sending anonymous letters, built with JavaScript and the Quill rich-text editor.",
+      "features": [
+        "Write anonymous letters using a rich-text editor.",
+        "Browse letters shared on the website."
+      ],
+      "focus": "Lightweight web development · Writing interface",
+      "kind": "Independent web project",
+      "category": "Web application · Anonymous letters",
+      "stacks": ["HTML", "CSS", "JavaScript", "Quill.js", "JSON Server"],
+      "image": "/images/letterio.webp",
+      "imageAlt": "Letterio interface",
+      "url": "https://willowy-daifuku-578167.netlify.app/",
+      "github": "https://github.com/pratikdevdas/letterio"
+    },
+    {
+      "id": "restproject",
+      "title": "Rest Country Display",
+      "description": "Explore the world, one country at a time.",
+      "overview": "A React project that presents country information from the REST Countries API. Built while learning React hooks and the SCSS 7-in-1 architecture.",
+      "features": [
+        "Browse country information supplied by the REST Countries API.",
+        "Explore a React interface with a color theme switcher."
+      ],
+      "focus": "API integration · React hooks · Styling architecture",
+      "kind": "Independent learning project",
+      "category": "Web application · Country explorer",
+      "stacks": ["React", "SCSS", "REST Countries API"],
+      "image": "/images/rest-api-countries.webp",
+      "imageAlt": "Rest Country Display interface",
+      "url": "https://rest-countries-api-with-color-theme-switcher-master-lac.vercel.app/",
+      "github": "https://github.com/pratikdevdas/rest-countries-api-with-color-theme-switcher-master"
+    }
+  ]
 }

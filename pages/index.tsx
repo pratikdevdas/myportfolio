@@ -1,72 +1,47 @@
-import Head from "next/head";
+import Link from "next/link";
+import { NextSeo } from "next-seo";
+import SiteLayout from "../components/SiteLayout";
 import Hero from "../components/Layout/Hero";
-import Navbar from "../components/Layout/Navbar";
-import Footer from "../components/Layout/Footer";
 import Projects from "../components/Projects";
-import { promises as fsPromises } from "fs";
-import path from "path";
-import Tools from "../components/Layout/Tools";
-import { NextSeo } from 'next-seo';
-
-export default function Home(props: any) {
+import BlogList from "../components/BlogList";
+import Arrow from "../components/Arrow";
+import { featuredProjects, projects } from "../lib/projects";
+import { readPosts, PostMeta } from "../lib/blog";
+export default function Home({ posts }: { posts: PostMeta[] }) {
   return (
-    <div>
+    <SiteLayout>
       <NextSeo
-        title="Pratik Dev Das - Portfolio"
-        description="Explore the portfolio of Pratik Dev Das, showcasing web development projects and skills."
-        openGraph={{
-          images: [
-            {
-              url: 'https://www.pratikdevdas.com/opengraph-image.webp', // Add your OG image URL here
-              width: 1200,
-              height: 630,
-              alt: 'Pratik Dev Das Portfolio',
-            },
-          ],
-        }}
+        title="Pratik Dev Das — Fullstack Engineer & Creative Technologist"
+        description="Web applications, AI-powered products and creative experiments by Pratik Dev Das."
+        canonical="https://www.pratikdevdas.com/"
       />
-      <div className="bg-dark-green-1000 text-base md:text-lg lg:text-xl">
-        <div className="">
-          <div className="mx-auto py-8 md:py-12 px-4 max-w-4xl lg:max-w-5xl xl:max-w-[1184px]">
-            <Navbar />
-            <Hero />
-            <div id="projects">
-              <Projects projects={props.projects} />
-            </div>
-            {/* <Tools/> */}
-          </div>
+      <Hero />
+      <section id="projects">
+        <div className="section-heading">
+          <h2>Selected work</h2>
+          <span className="eyebrow">
+            03 selected / 0{projects.length} projects
+          </span>
         </div>
-        <div id="contact" className="mx-auto max-w-[660px] lg:max-w-[900px] xl:max-w-[1100px]">
-          <Footer />
+        <Projects projects={featuredProjects} />
+        <div className="all-projects">
+          <Link className="action-secondary" href="/projects">
+            View all {projects.length} projects <Arrow />
+          </Link>
         </div>
-        <div className="flex justify-center border-t-2 border-t-g700  text-center text-lg text-light md:text-xl">
-          <p className="py-3 text-base lg:text-lg leading-7 md:leading-8 lg:leading-9 text-dark-green-200 max-w-xl">
-            Made with ❤️ by{" "}
-            <a
-              href="https://www.pratikdevdas.com"
-              className="pl-1 text-green underline hover:text-light"
-            >
-              Pratik.
-            </a>
-            {/* Read my blogs{" "}
-            <a
-              href="https://blog.pratikdevdas.com/"
-              className="pl-1 text-green underline hover:text-light"
-            >
-              here.
-            </a> */}
-          </p>
+      </section>
+      <section className="writing-section">
+        <div className="section-heading">
+          <h2>Notes from building</h2>
+          <Link className="text-link" href="/blog">
+            The blog <Arrow />
+          </Link>
         </div>
-      </div>
-    </div>
+        <BlogList posts={posts} />
+      </section>
+    </SiteLayout>
   );
 }
-
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "data.json");
-  const jsonData = await fsPromises.readFile(filePath);
-  const objectData = JSON.parse(jsonData as any);
-  return {
-    props: objectData,
-  };
+  return { props: { posts: (await readPosts()).slice(0, 3) } };
 }

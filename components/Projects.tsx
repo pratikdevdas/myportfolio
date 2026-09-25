@@ -1,96 +1,84 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useInView } from 'react-intersection-observer';
-
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-}
-
-interface ProjectsProps {
-  projects: Project[];
-}
-
-const Projects = ({ projects }: ProjectsProps) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
-
-  const sortedProjects = [...projects].reverse();
-
+import { Project } from "../types/project";
+import Arrow from "./Arrow";
+export function ProjectArtwork({
+  project,
+  detail = false,
+}: {
+  project: Project;
+  detail?: boolean;
+}) {
   return (
-    <section 
-      ref={ref}
-      className={`mx-auto max-w-[990px] px-6 py-16 lg:max-w-[1150px] lg:py-32 opacity-0 ${
-        inView ? 'animate-fade-in-up' : ''
-      }`}
+    <div
+      className={`project-artwork ${
+        project.secondaryImage ? "project-artwork--comic" : ""
+      } ${detail ? "project-artwork--detail" : ""}`}
     >
-      <div className="mb-16 text-center">
-        <h2 className="font-dm-sans mb-3 text-3xl md:text-5xl lg:text-6xl text-dark-green-50">
-          Projects
-        </h2>
-        <p className="text-base lg:text-lg leading-7 md:leading-8 lg:leading-9 text-dark-green-200">
-          I like building & building a few projects when I have some time to
-          spare
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 gap-8 md:gap-[72px] lg:grid-cols-2 lg:grid-areas-projects">
-        {sortedProjects.map((project, index) => (
-          <div
-            key={project.id}
-            className={`project-item ${index % 2 === 0 ? "lg:area-project1" : "lg:area-project2"}`}
+      <Image
+        src={project.image}
+        alt={project.imageAlt}
+        width={960}
+        height={720}
+        sizes={
+          detail
+            ? "(max-width: 1100px) 90vw, 1060px"
+            : "(max-width: 600px) 90vw, (max-width: 850px) 45vw, 340px"
+        }
+        priority={detail}
+      />
+      {project.secondaryImage ? (
+        <Image
+          src={project.secondaryImage}
+          alt={project.secondaryImageAlt || project.title}
+          width={460}
+          height={1000}
+          sizes={detail ? "300px" : "170px"}
+        />
+      ) : null}
+    </div>
+  );
+}
+export default function Projects({ projects }: { projects: Project[] }) {
+  return (
+    <div className="project-grid">
+      {projects.map((project) => (
+        <article className="project-card" key={project.id}>
+          <Link
+            href={`/projects/${project.id}`}
+            aria-label={`View ${project.title}`}
           >
-            <Project project={project} />
+            <ProjectArtwork project={project} />
+          </Link>
+          <p className="project-category">{project.category}</p>
+          <h3>
+            <Link href={`/projects/${project.id}`}>{project.title}</Link>
+          </h3>
+          <p className="project-description">{project.description}</p>
+          <div className="project-links">
+            <Link href={`/projects/${project.id}`}>
+              View project <Arrow />
+            </Link>
+            {project.appUrl ? (
+              <a
+                href={project.appUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                App Store <Arrow />
+              </a>
+            ) : project.github ? (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub <Arrow />
+              </a>
+            ) : null}
           </div>
-        ))}
-      </div>
-    </section>
+        </article>
+      ))}
+    </div>
   );
-};
-
-export default Projects;
-
-const Project = ({ project }: { project: Project }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
-
-  return (
-    <Link 
-      href={`/projects/${project.id}`}
-      className="block"
-    >
-      <div 
-        ref={ref}
-        className={`space-y-6 opacity-0 transition-all duration-300 hover:translate-y-[-8px] ${
-          inView ? 'animate-fade-in-up' : ''
-        }`}
-      >
-        <div className="p-12 bg-dark-green-950 rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-lg">
-          <Image
-            className="rounded-lg transform transition-transform duration-500 group-hover:scale-105"
-            width={460}
-            height={340}
-            src={project.image}
-            alt={`${project.title} preview`}
-            priority
-          />
-        </div>
-        <div className="space-y-3">
-          <p className="text-dark-green-50 text-xl hover:text-dark-green-100 duration-300 transition-all font-dm-sans">{project.title}</p>
-          <p className="text-dark-green-200 text-sm">
-            {project.description}
-          </p>
-          <p className="text-dark-green-200 text-sm hover:text-dark-green-50 duration-300 transition-all">
-            Learn More &gt;
-          </p>
-        </div>
-      </div>
-    </Link>
-  );
-};
+}
