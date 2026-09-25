@@ -35,3 +35,9 @@ referencing Harvard MCS resume guidance. Standard section headings with rules,
 bold company/project names, separate italic role lines and aligned dates establish
 a clear reading hierarchy. PDF text order, embedded fonts and one-page rendering
 are verified. Contact details remain in the body rather than page headers.
+
+The homepage introduction has a quiet greeting, one main statement, one supporting
+sentence that includes SlidesAI, and one work action. Resume access remains in
+the navigation. The homepage Writing section appears only for published posts;
+the Blog route remains available. The footer groups email and social links without
+a repeated contact heading or resume action.

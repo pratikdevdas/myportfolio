@@ -8,12 +8,9 @@ export default function Footer() {
   return (
     <footer className="site-footer" id="contact">
       <div className="footer-main">
-        <div>
-          <h2>Let’s talk</h2>
-          <a className="contact-email" href="mailto:dasdev.pratik@gmail.com">
-            dasdev.pratik@gmail.com
-          </a>
-        </div>
+        <a className="contact-email" href="mailto:dasdev.pratik@gmail.com">
+          dasdev.pratik@gmail.com
+        </a>
         <nav aria-label="Social links">
           {socials.map(([label, url]) => (
             <a key={label} href={url} target="_blank" rel="noopener noreferrer">
@@ -24,9 +21,6 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© Pratik Dev Das</span>
-        <a href="/resume.pdf" download="Pratik-Dev-Das-Resume.pdf">
-          Download resume
-        </a>
       </div>
     </footer>
   );

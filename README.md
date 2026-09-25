@@ -22,7 +22,7 @@ Development runs at http://localhost:6969. The build also regenerates the sitema
 
 The public file is **`public/resume.pdf`**, available at **`/resume.pdf`** after
 deployment. All resume buttons point there. Replace that PDF and commit it to keep
-the URL stable. Visitors can view it in their browser or use the footer download.
+the URL stable. The Resume navigation link opens it in the browser, where visitors can download it.
 
 The editable source for the current PDF is `scripts/build-resume.py`. To update it:
 
@@ -54,7 +54,8 @@ The filename becomes `/blog/building-agent-comics`. Drafts, posts without an exp
 `draft: false`, and future-dated posts are excluded from listings, routes and sitemap.
 Dates are interpreted in UTC. Future posts require a new build on or after their
 publication date; this is not an automatic scheduling service. Raw HTML is sanitized.
-The starter template is deliberately unpublished.
+The starter template is deliberately unpublished. The homepage Writing section
+appears once at least one post is published; the Blog navigation link is always available.
 
 ## Projects
 

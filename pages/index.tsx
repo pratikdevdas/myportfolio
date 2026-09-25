@@ -31,15 +31,17 @@ export default function Home({ posts }: { posts: PostMeta[] }) {
           </Link>
         </div>
       </section>
-      <section className="writing-section">
-        <div className="section-heading">
-          <h2>Writing</h2>
-          <Link className="text-link" href="/blog">
-            Visit the blog
-          </Link>
-        </div>
-        <BlogList posts={posts} />
-      </section>
+      {posts.length > 0 ? (
+        <section className="writing-section">
+          <div className="section-heading">
+            <h2>Writing</h2>
+            <Link className="text-link" href="/blog">
+              Visit the blog
+            </Link>
+          </div>
+          <BlogList posts={posts} />
+        </section>
+      ) : null}
     </SiteLayout>
   );
 }
