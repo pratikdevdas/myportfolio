@@ -17,8 +17,9 @@ It preserves the supplied employment achievements, includes agentic presentation
 chat and the credit system under SlidesAI, and features Agent Comics, Garden Home
 and Email Classifier. Open Graph Generator is excluded at the owner's request.
 
-Garden Home uses its requested custom domain with the working Sites URL also
-available as an alternate preview. No DNS changes are part of this PR.
+Garden Home links from the resume to its portfolio project page, which provides
+the working Sites preview and walkthrough. The custom domain is not linked while
+it is unavailable. No DNS changes are part of this PR.
 
 Validation covers publication filtering, Markdown sanitization, date validation,
 path safety, legacy project routes, type checking, lint, production build, PDF

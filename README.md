@@ -63,7 +63,8 @@ project appears at `/projects` and `/projects/<id>`. Keep existing IDs to preser
 incoming links. Use local optimized images under `public/images/`. Optional links
 include `github`, `appUrl`, `videoUrl`, and `previewUrl`.
 
-Garden Home points to `https://garden-home.pratikdevdas.com`. Its original Sites URL
-remains an alternate preview while the custom domain is being connected.
+Garden Home links from the resume to `/projects/garden-home`. That portfolio
+page links to the working Sites preview and walkthrough. The unavailable custom
+domain is not linked; update the project URL once it is live.
 
 The design and scope are recorded in `docs/portfolio-refresh.md`.
