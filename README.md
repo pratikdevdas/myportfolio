@@ -33,7 +33,9 @@ python3 -m venv .venv
 ```
 
 Review the resulting single-page PDF visually before committing `public/resume.pdf`.
-The Python tooling is only for authoring; the website does not require Python.
+The PDF embeds the regular and bold Bitstream Vera fonts bundled with ReportLab.
+Its text remains selectable and scales cleanly when zoomed. The Python tooling is
+only for authoring; the website does not require Python.
 
 ## Publish a blog post
 

@@ -21,3 +21,8 @@ available as an alternate preview. No DNS changes are part of this PR.
 Validation covers publication filtering, Markdown sanitization, date validation,
 path safety, legacy project routes, type checking, lint, production build, PDF
 content/layout and browser checks of the main navigation and responsive pages.
+
+The resume gives analytics-driven drip campaigns a separate experience bullet and
+describes Garden Home as AI-driven. Embedded regular/bold fonts and larger body
+text improve PDF readability. A vector P monogram on dark green replaces the
+portrait favicon, with a multi-size ICO fallback and an Apple touch icon.

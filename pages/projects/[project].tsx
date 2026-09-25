@@ -109,6 +109,8 @@ export default function ProjectPage({ project, next }: Props) {
               <dt>
                 {project.id === "agent-comics"
                   ? "Product capabilities"
+                  : project.id === "garden-home"
+                  ? "Creative workflow"
                   : "Tools & technologies"}
               </dt>
               <dd>{project.stacks.join(" · ")}</dd>

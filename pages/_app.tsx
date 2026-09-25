@@ -35,6 +35,15 @@ const DEFAULT_SEO = {
       content: "Pratik Dev Das",
     },
   ],
+  additionalLinkTags: [
+    { rel: "icon", href: "/favicon.ico?v=2", sizes: "16x16 32x32 48x48 64x64" },
+    { rel: "icon", href: "/favicon.svg?v=2", type: "image/svg+xml" },
+    {
+      rel: "apple-touch-icon",
+      href: "/apple-touch-icon.png?v=2",
+      sizes: "180x180",
+    },
+  ],
 };
 
 function MyApp({ Component, pageProps }: AppProps) {

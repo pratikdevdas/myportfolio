@@ -27,20 +27,24 @@
     {
       "id": "garden-home",
       "title": "Garden Home",
-      "description": "A sense of place, before it exists.",
-      "overview": "A conceptual residential study developed from an approved ground-floor plan. The project explores furnished interiors, materials, light and room relationships through still images and films.",
+      "description": "An AI-driven exploration of home, light and space.",
+      "overview": "An AI-driven architectural visualization project exploring a conceptual home from a ground-floor plan. Created with AI to visualize furnished interiors, materials, light and room relationships through images and films.",
       "features": [
-        "Six interior views rendered in Blender Cycles, available in 4K.",
-        "Unreal Engine views for comparing lighting and material treatments.",
-        "A 90-second cinematic film introducing the home.",
-        "A continuous walkthrough of the furnished ground floor and schematic garden."
+        "AI-created interior views exploring the furnished home.",
+        "Compare lighting and material treatments across rooms.",
+        "A cinematic film introducing the home.",
+        "A walkthrough of the furnished ground floor and schematic garden."
       ],
-      "focus": "Materials · Lighting · Composition · Camera movement",
+      "focus": "AI-driven visualization · Materials · Lighting · Composition",
       "kind": "Independent visualization study · Stills and films",
-      "category": "Architectural visualization · Blender & Unreal Engine",
-      "stacks": ["Blender Cycles", "Unreal Engine"],
+      "category": "AI-driven architectural visualization",
+      "stacks": [
+        "AI-assisted image creation",
+        "Architectural visualization",
+        "Visual storytelling"
+      ],
       "image": "/images/garden-home.webp",
-      "imageAlt": "Garden Home living and dining space rendered in Blender Cycles",
+      "imageAlt": "AI-created Garden Home living and dining space",
       "url": "https://garden-home.pratikdevdas.com",
       "videoUrl": "https://www.youtube.com/watch?v=3ietQpQrR04",
       "previewUrl": "https://garden-home.stuticodes.chatgpt.site/"
