@@ -2,42 +2,53 @@ import "../styles/globals.css";
 import Script from "next/script";
 import { AppProps } from "next/app";
 import { DM_Sans } from "next/font/google";
-import { DefaultSeo } from 'next-seo';
+import { DefaultSeo } from "next-seo";
 
 const dmSans = DM_Sans({
-  subsets: ['latin'],
-})
+  subsets: ["latin"],
+});
 
 // Default SEO configuration
 const DEFAULT_SEO = {
   title: "Pratik Dev Das - Web Developer",
-  description: "Welcome to Pratik Dev Das's portfolio website. Explore projects and learn more about my work.",
+  description:
+    "Welcome to Pratik Dev Das's portfolio website. Explore projects and learn more about my work.",
   openGraph: {
-    type: 'website',
-    locale: 'en_IE',
-    url: 'https://www.pratikdevdas.com/',
-    siteName: 'Pratik Dev Das Portfolio',
+    type: "website",
+    locale: "en_IE",
+    url: "https://www.pratikdevdas.com/",
+    siteName: "Pratik Dev Das Portfolio",
   },
   twitter: {
-    handle: '@pratikdevdas',
-    site: '@pratikdevdas',
-    cardType: 'summary_large_image',
+    handle: "@pratikdevdas",
+    site: "@pratikdevdas",
+    cardType: "summary_large_image",
   },
   additionalMetaTags: [
     {
-      name: 'keywords',
-      content: 'Pratik Dev Das, web developer, portfolio, projects, ai, ui, product, design, engineering'
+      name: "keywords",
+      content:
+        "Pratik Dev Das, web developer, portfolio, projects, ai, ui, product, design, engineering",
     },
     {
-      name: 'author',
-      content: 'Pratik Dev Das'
-    }
-  ]
+      name: "author",
+      content: "Pratik Dev Das",
+    },
+  ],
+  additionalLinkTags: [
+    { rel: "icon", href: "/favicon.ico?v=2", sizes: "16x16 32x32 48x48 64x64" },
+    { rel: "icon", href: "/favicon.svg?v=2", type: "image/svg+xml" },
+    {
+      rel: "apple-touch-icon",
+      href: "/apple-touch-icon.png?v=2",
+      sizes: "180x180",
+    },
+  ],
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${dmSans.className} font-sans`}>
+    <div className={dmSans.className}>
       <DefaultSeo {...DEFAULT_SEO} />
       <Component {...pageProps} />
       <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
@@ -49,7 +60,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </noscript>
-    </main>
+    </div>
   );
 }
 
