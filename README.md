@@ -33,8 +33,11 @@ python3 -m venv .venv
 ```
 
 Review the resulting single-page PDF visually before committing `public/resume.pdf`.
-The PDF embeds the regular and bold Bitstream Vera fonts bundled with ReportLab.
-Its text remains selectable and scales cleanly when zoomed. The Python tooling is
+The resume follows a classic single-column bullet-point format with standard
+section headings, distinct employer and role lines, and aligned dates. It uses no
+photos, sidebars or layout tables. Regular, bold and italic Bitstream Vera fonts
+are embedded; text stays selectable. The builder verifies section extraction
+order and required content. This is a formatting check, not a guarantee for every ATS. The Python tooling is
 only for authoring; the website does not require Python.
 
 ## Publish a blog post

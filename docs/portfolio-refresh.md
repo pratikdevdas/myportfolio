@@ -28,3 +28,9 @@ The resume gives analytics-driven drip campaigns a separate experience bullet an
 describes Garden Home as AI-driven. Embedded regular/bold fonts and larger body
 text improve PDF readability. A vector P monogram on dark green replaces the
 portrait favicon, with a multi-size ICO fallback and an Apple touch icon.
+
+The resume uses a classic black-and-white, single-column bullet-point layout,
+referencing Harvard MCS resume guidance. Standard section headings with rules,
+bold company/project names, separate italic role lines and aligned dates establish
+a clear reading hierarchy. PDF text order, embedded fonts and one-page rendering
+are verified. Contact details remain in the body rather than page headers.
