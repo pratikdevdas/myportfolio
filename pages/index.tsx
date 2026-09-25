@@ -4,7 +4,6 @@ import SiteLayout from "../components/SiteLayout";
 import Hero from "../components/Layout/Hero";
 import Projects from "../components/Projects";
 import BlogList from "../components/BlogList";
-import Arrow from "../components/Arrow";
 import { featuredProjects, projects } from "../lib/projects";
 import { readPosts, PostMeta } from "../lib/blog";
 export default function Home({ posts }: { posts: PostMeta[] }) {
@@ -18,23 +17,25 @@ export default function Home({ posts }: { posts: PostMeta[] }) {
       <Hero />
       <section id="projects">
         <div className="section-heading">
-          <h2>Selected work</h2>
-          <span className="eyebrow">
-            03 selected / 0{projects.length} projects
-          </span>
+          <div>
+            <h2>Selected work</h2>
+            <p className="section-description">
+              A few things I’ve built recently.
+            </p>
+          </div>
         </div>
         <Projects projects={featuredProjects} />
         <div className="all-projects">
           <Link className="action-secondary" href="/projects">
-            View all {projects.length} projects <Arrow />
+            View all {projects.length} projects
           </Link>
         </div>
       </section>
       <section className="writing-section">
         <div className="section-heading">
-          <h2>Notes from building</h2>
+          <h2>Writing</h2>
           <Link className="text-link" href="/blog">
-            The blog <Arrow />
+            Visit the blog
           </Link>
         </div>
         <BlogList posts={posts} />

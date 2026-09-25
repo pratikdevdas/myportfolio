@@ -19,7 +19,7 @@ export default function AllProjects() {
         </p>
       </header>
       <section className="projects-page" aria-label="All projects">
-        <Projects projects={projects} />
+        <Projects projects={projects} headingLevel={2} />
       </section>
     </SiteLayout>
   );

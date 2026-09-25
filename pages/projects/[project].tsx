@@ -3,7 +3,6 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import SiteLayout from "../../components/SiteLayout";
 import { ProjectArtwork } from "../../components/Projects";
-import Arrow from "../../components/Arrow";
 import { projects, getProject } from "../../lib/projects";
 import { Project } from "../../types/project";
 interface Props {
@@ -46,7 +45,6 @@ export default function ProjectPage({ project, next }: Props) {
               {project.id === "agent-comics"
                 ? "Visit website"
                 : "View live project"}{" "}
-              <Arrow />
             </a>
             {project.appUrl ? (
               <a
@@ -55,7 +53,7 @@ export default function ProjectPage({ project, next }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                App Store <Arrow />
+                App Store
               </a>
             ) : null}
             {project.github ? (
@@ -65,7 +63,7 @@ export default function ProjectPage({ project, next }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View source <Arrow />
+                View source
               </a>
             ) : null}
             {project.videoUrl ? (
@@ -75,7 +73,7 @@ export default function ProjectPage({ project, next }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Watch walkthrough <Arrow />
+                Watch walkthrough
               </a>
             ) : null}
             {project.previewUrl ? (
@@ -85,7 +83,7 @@ export default function ProjectPage({ project, next }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Alternate preview <Arrow />
+                Alternate preview
               </a>
             ) : null}
           </div>
@@ -123,7 +121,7 @@ export default function ProjectPage({ project, next }: Props) {
           <Link href="/projects">← All projects</Link>
           <Link href={`/projects/${next.id}`}>
             <span className="eyebrow">Next project</span>
-            {next.title} <Arrow />
+            {next.title}
           </Link>
         </nav>
       </article>

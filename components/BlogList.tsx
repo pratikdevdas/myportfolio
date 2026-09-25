@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { PostMeta } from "../lib/blog";
-import Arrow from "./Arrow";
 export function formatDate(date: string) {
   return new Intl.DateTimeFormat("en", {
     day: "numeric",
@@ -29,9 +28,7 @@ export default function BlogList({ posts }: { posts: PostMeta[] }) {
             {post.readingMinutes} min read
           </p>
           <h3>
-            <Link href={`/blog/${post.slug}`}>
-              {post.title} <Arrow />
-            </Link>
+            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
           </h3>
           <p>{post.description}</p>
         </article>

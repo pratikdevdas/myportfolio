@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Project } from "../types/project";
-import Arrow from "./Arrow";
 export function ProjectArtwork({
   project,
   detail = false,
@@ -39,44 +38,32 @@ export function ProjectArtwork({
     </div>
   );
 }
-export default function Projects({ projects }: { projects: Project[] }) {
+export default function Projects({
+  projects,
+  headingLevel = 3,
+}: {
+  projects: Project[];
+  headingLevel?: 2 | 3;
+}) {
+  const Heading = headingLevel === 2 ? "h2" : "h3";
   return (
     <div className="project-grid">
       {projects.map((project) => (
         <article className="project-card" key={project.id}>
           <Link
+            className="project-card-link"
             href={`/projects/${project.id}`}
-            aria-label={`View ${project.title}`}
+            aria-labelledby={`project-${project.id}`}
           >
             <ProjectArtwork project={project} />
+            <div className="project-card-copy">
+              <Heading className="project-title" id={`project-${project.id}`}>
+                {project.title}
+              </Heading>
+              <p className="project-category">{project.category}</p>
+              <p className="project-description">{project.description}</p>
+            </div>
           </Link>
-          <p className="project-category">{project.category}</p>
-          <h3>
-            <Link href={`/projects/${project.id}`}>{project.title}</Link>
-          </h3>
-          <p className="project-description">{project.description}</p>
-          <div className="project-links">
-            <Link href={`/projects/${project.id}`}>
-              View project <Arrow />
-            </Link>
-            {project.appUrl ? (
-              <a
-                href={project.appUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                App Store <Arrow />
-              </a>
-            ) : project.github ? (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub <Arrow />
-              </a>
-            ) : null}
-          </div>
         </article>
       ))}
     </div>

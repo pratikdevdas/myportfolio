@@ -1,8 +1,10 @@
 # Portfolio refresh
 
 The reviewed direction retains Pratik's photo and real project imagery, uses dark
-green surfaces and restrained 16px icons, and replaces the large footer with a
-compact contact area. The homepage features Agent Comics, Garden Home and Email
+green surfaces, a consistent sans-serif type hierarchy, and a compact contact
+area. Decorative arrows and repeated card actions are removed: each project
+card is one link, with external destinations on its detail page. The introduction
+and selected work have priority; writing and contact use quieter headings. The homepage features Agent Comics, Garden Home and Email
 Classifier. All six projects have detail pages; the four existing project URLs
 remain unchanged. The all-projects button opens `/projects`.
 

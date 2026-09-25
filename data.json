@@ -3,7 +3,7 @@
     {
       "id": "agent-comics",
       "title": "Agent Comics",
-      "description": "An idea becomes a story. A story becomes a comic.",
+      "description": "Turn story ideas into illustrated comics, with guided planning and an iPhone app.",
       "overview": "An AI comic-making product that guides people from an initial pitch through story planning and full-page artwork. Users can review the proposed characters and story before generation.",
       "features": [
         "An agent helps shape a story idea into characters, beats and pages.",
@@ -13,7 +13,7 @@
       ],
       "focus": "Generative AI · Story planning · Sequential art",
       "kind": "Independent product · iOS app and website",
-      "category": "AI storytelling · iPhone & iPad",
+      "category": "AI comic creation",
       "stacks": [
         "Guided planning, character references, image generation, downloadable comic pages"
       ],
@@ -27,7 +27,7 @@
     {
       "id": "garden-home",
       "title": "Garden Home",
-      "description": "An AI-driven exploration of home, light and space.",
+      "description": "Explore a home through AI-created interiors, lighting studies and walkthroughs.",
       "overview": "An AI-driven architectural visualization project exploring a conceptual home from a ground-floor plan. Created with AI to visualize furnished interiors, materials, light and room relationships through images and films.",
       "features": [
         "AI-created interior views exploring the furnished home.",
@@ -37,7 +37,7 @@
       ],
       "focus": "AI-driven visualization · Materials · Lighting · Composition",
       "kind": "Independent visualization study · Stills and films",
-      "category": "AI-driven architectural visualization",
+      "category": "AI architectural visualization",
       "stacks": [
         "AI-assisted image creation",
         "Architectural visualization",
@@ -52,7 +52,7 @@
     {
       "id": "emailClassify",
       "title": "Email Classifier",
-      "description": "A clearer inbox, with a little help from AI.",
+      "description": "Connect Gmail and organize your inbox with GPT-powered email classification.",
       "overview": "A web application that connects to Gmail with OAuth and categorizes messages using GPT-4o mini. The interface was designed in Figma and built with Next.js and Tailwind.",
       "features": [
         "Connect a Gmail account using OAuth.",
@@ -62,7 +62,7 @@
       ],
       "focus": "AI integration · Authentication · Interface design",
       "kind": "Independent web application",
-      "category": "AI application · Email organization",
+      "category": "AI email organization",
       "stacks": [
         "Next.js",
         "Tailwind",

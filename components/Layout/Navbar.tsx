@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Arrow from "../Arrow";
 export default function Navbar() {
   const { pathname } = useRouter();
   return (
@@ -22,7 +21,7 @@ export default function Navbar() {
           Blog
         </Link>
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-          Resume <Arrow />
+          Resume
         </a>
         <Link href="/#contact">Contact</Link>
       </nav>
