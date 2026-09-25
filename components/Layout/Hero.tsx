@@ -1,22 +1,24 @@
+import { trackedUrl } from "../../lib/links";
 import Image from "next/image";
 import Link from "next/link";
 import HeroImage from "../../public/images/PorfolioHeroV2.png";
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" data-track-placement="hero">
       <div>
         <p className="hero-intro">Hi, I’m Pratik.</p>
         <h1>I build useful software.</h1>
         <p className="hero-description">
           Fullstack engineer at{" "}
           <a
-            href="https://www.slidesai.io/"
+            href={trackedUrl("https://www.slidesai.io/", "hero_slidesai")}
             target="_blank"
             rel="noopener noreferrer"
           >
             SlidesAI
           </a>
-          , building web applications and AI-powered products.
+          , building web applications and AI-powered products, with a love for
+          creative exploration.
         </p>
         <div className="hero-actions">
           <Link className="action-primary" href="#projects">

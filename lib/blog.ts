@@ -1,8 +1,25 @@
+import { trackedUrl } from "./links";
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+// Apply attribution before HTML conversion; the sanitizer still controls output.
+interface MarkdownNode {
+  type: string;
+  url?: string;
+  children?: MarkdownNode[];
+}
+function attributeLinks(content: string) {
+  return () => (tree: MarkdownNode) => {
+    function visit(node: MarkdownNode) {
+      if ((node.type === "link" || node.type === "definition") && node.url)
+        node.url = trackedUrl(node.url, content);
+      node.children?.forEach(visit);
+    }
+    visit(tree);
+  };
+}
 export interface PostMeta {
   slug: string;
   title: string;
@@ -90,7 +107,10 @@ export async function readPost(
   return {
     ...entry.meta,
     html: String(
-      await remark().use(html, { sanitize: true }).process(entry.content)
+      await remark()
+        .use(attributeLinks(`blog_${slug}`))
+        .use(html, { sanitize: true })
+        .process(entry.content)
     ),
   };
 }

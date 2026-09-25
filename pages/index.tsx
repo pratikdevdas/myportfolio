@@ -15,7 +15,7 @@ export default function Home({ posts }: { posts: PostMeta[] }) {
         canonical="https://www.pratikdevdas.com/"
       />
       <Hero />
-      <section id="projects">
+      <section id="projects" data-track-placement="home_projects">
         <div className="section-heading">
           <div>
             <h2>Selected work</h2>

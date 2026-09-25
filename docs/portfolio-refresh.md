@@ -41,3 +41,9 @@ sentence that includes SlidesAI, and one work action. Resume access remains in
 the navigation. The homepage Writing section appears only for published posts;
 the Blog route remains available. The footer groups email and social links without
 a repeated contact heading or resume action.
+
+Both contact entry points open a shared email draft. External website links use
+consistent portfolio UTMs; internal links use click events without campaign tags.
+The existing Simple Analytics integration records outbound, project, contact,
+resume and navigation clicks with placement metadata. The introduction also
+mentions creative exploration.

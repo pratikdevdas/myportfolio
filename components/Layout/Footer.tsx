@@ -1,3 +1,4 @@
+import { contactHref, trackedUrl } from "../../lib/links";
 const socials = [
   ["GitHub", "https://github.com/pratikdevdas"],
   ["LinkedIn", "https://www.linkedin.com/in/pratikdevdas/"],
@@ -6,14 +7,19 @@ const socials = [
 ];
 export default function Footer() {
   return (
-    <footer className="site-footer" id="contact">
+    <footer className="site-footer" id="contact" data-track-placement="footer">
       <div className="footer-main">
-        <a className="contact-email" href="mailto:dasdev.pratik@gmail.com">
+        <a className="contact-email" href={contactHref}>
           dasdev.pratik@gmail.com
         </a>
         <nav aria-label="Social links">
           {socials.map(([label, url]) => (
-            <a key={label} href={url} target="_blank" rel="noopener noreferrer">
+            <a
+              key={label}
+              href={trackedUrl(url, `footer_${label.toLowerCase()}`)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {label}
             </a>
           ))}

@@ -1,3 +1,4 @@
+import { trackedUrl } from "../../lib/links";
 import Link from "next/link";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
@@ -25,7 +26,11 @@ export default function ProjectPage({ project, next }: Props) {
           ],
         }}
       />
-      <article className="project-detail">
+      <article
+        className="project-detail"
+        data-project={project.id}
+        data-track-placement="project_detail"
+      >
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <Link href="/projects">← All projects</Link>
           <span>/</span>
@@ -38,7 +43,7 @@ export default function ProjectPage({ project, next }: Props) {
           <div className="detail-actions">
             <a
               className="action-primary"
-              href={project.url}
+              href={trackedUrl(project.url, `${project.id}_website`)}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -49,7 +54,7 @@ export default function ProjectPage({ project, next }: Props) {
             {project.appUrl ? (
               <a
                 className="action-secondary"
-                href={project.appUrl}
+                href={trackedUrl(project.appUrl, `${project.id}_app_store`)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -59,7 +64,7 @@ export default function ProjectPage({ project, next }: Props) {
             {project.github ? (
               <a
                 className="action-secondary"
-                href={project.github}
+                href={trackedUrl(project.github, `${project.id}_source`)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -69,7 +74,7 @@ export default function ProjectPage({ project, next }: Props) {
             {project.videoUrl ? (
               <a
                 className="action-secondary"
-                href={project.videoUrl}
+                href={trackedUrl(project.videoUrl, `${project.id}_walkthrough`)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -79,7 +84,7 @@ export default function ProjectPage({ project, next }: Props) {
             {project.previewUrl ? (
               <a
                 className="text-link"
-                href={project.previewUrl}
+                href={trackedUrl(project.previewUrl, `${project.id}_preview`)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
