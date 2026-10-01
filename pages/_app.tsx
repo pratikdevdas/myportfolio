@@ -3,6 +3,7 @@ import Script from "next/script";
 import { AppProps } from "next/app";
 import { DM_Sans } from "next/font/google";
 import { DefaultSeo } from "next-seo";
+import { Analytics } from "@vercel/analytics/next";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <div className={dmSans.className}>
       <DefaultSeo {...DEFAULT_SEO} />
       <Component {...pageProps} />
+      <Analytics />
       <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       <noscript>
         {/* eslint-disable @next/next/no-img-element */}
