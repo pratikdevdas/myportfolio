@@ -25,7 +25,7 @@ INK = HexColor("#111111")
 MUTED = HexColor("#333333")
 styles = {
     "name": ParagraphStyle("name", fontName="ResumeSans-Bold", fontSize=22, leading=25, alignment=1, spaceAfter=3),
-    "role": ParagraphStyle("role", fontName="ResumeSans", fontSize=10.5, leading=14, alignment=1, spaceAfter=5),
+    "role": ParagraphStyle("role", fontName="ResumeSans-Italic", fontSize=9.8, leading=13, alignment=1, spaceAfter=4),
     "contact": ParagraphStyle("contact", fontName="ResumeSans", fontSize=9, leading=12.5, alignment=1, spaceAfter=2),
     "section": ParagraphStyle("section", fontName="ResumeSans-Bold", fontSize=11, leading=14, spaceAfter=3, keepWithNext=True),
     "title": ParagraphStyle("title", fontName="ResumeSans-Bold", fontSize=10.2, leading=13, spaceAfter=3, keepWithNext=True),
@@ -87,16 +87,17 @@ def link(url, label):
 
 
 p('Pratik Dev Das','name')
+p('Fullstack engineer who ships LLM agents and integrations to real users, with TypeScript and Cloudflare.','role')
 p(link('mailto:dasdev.pratik@gmail.com','dasdev.pratik@gmail.com')+' | +91 7979901261<br/>'+link('https://www.pratikdevdas.com','pratikdevdas.com')+' | '+link('https://github.com/pratikdevdas','github.com/pratikdevdas')+' | '+link('https://www.linkedin.com/in/pratikdevdas/','linkedin.com/in/pratikdevdas'),'contact')
 section('PROFESSIONAL EXPERIENCE')
 employment('SlidesAI.io', 'Fullstack Engineer', 'June 2024 - Present')
-p('- Built key features of our agentic presentation chat, including research, artifacts and template suggestions.','bullet')
+p("- Built research, artifacts and template suggestions for SlidesAI's agentic presentation chat, where users create and edit decks by talking to an agent.",'bullet')
 p('- Built its credit system. When users run out of credits, the agent tells them in the chat and nudges them to buy more, which lifted payments by 22%.','bullet')
 p('- Rebuilt the presentation generation flow on Cloudflare Queues, Durable Objects and WebSockets. Agentic generation takes a while, so users now see live progress as it runs, and server overhead dropped by 50%.','bullet')
 p('- Launched an AI PowerPoint add-in that makes presentations from a topic, script or website. It hit #2 among AI add-ins on the Microsoft Marketplace within two weeks.','bullet')
-p('- Evaluated LLM workflows across 2M+ presentations with Promptfoo, LangSmith, Latitude and Laminar, raising positive feedback to 18-20% in two months.','bullet')
-p('- Shipped features and drip campaigns based on user requests and analytics for a Google Slides add-on with 15M+ downloads.','bullet')
-p('- Built Interactico, a live polls and quizzes tool for Google Meet with 13K+ downloads, including subscription billing and analytics.','bullet')
+p('- Set up evals for LLM workflows across 2M+ presentations with Promptfoo, LangSmith, Latitude and Laminar, then used the results to tune prompts and raise positive user feedback within two months.','bullet')
+p('- Talked directly with users and customers of a Google Slides add-on with 15M+ downloads, then shipped the features they asked for and ran drip campaigns based on analytics.','bullet')
+p('- Built Interactico, a live polls and quizzes tool for Google Meet with 19K+ downloads, including subscription billing and analytics.','bullet')
 p('- Built a WordPress, GraphQL and Next.js CMS on Cloudflare KV that cut build time for 170 blog pages from 17 to 3 minutes.','bullet')
 flow.append(Spacer(1,4))
 employment('9AI.in', 'Frontend Engineer Intern', 'March 2024 - May 2024')
@@ -112,7 +113,7 @@ p('- A Gmail agent that sorts email into categories, using OAuth, GPT-4o mini an
 flow.append(Spacer(1,4))
 p('More projects at '+link('https://www.pratikdevdas.com','pratikdevdas.com'),'title')
 section('TECHNICAL SKILLS')
-p('<b>Development:</b> JavaScript, TypeScript, React, Redux, TanStack Start, React Query, Next.js, Remix, Radix UI, Tailwind, GraphQL, Node.js, Express, PostgreSQL, OAuth, Jest, Cypress<br/><b>AI &amp; Agents:</b> LLM APIs, tool calling, MCP servers, LangChain, LangSmith, Promptfoo, Latitude, Laminar<br/><b>Cloud:</b> Cloudflare Workers, KV, Queues, Workers AI, Durable Objects, Observability, AI Gateway, Workflows, Agents; WebSockets, Docker<br/><b>Tools:</b> Figma, Cursor, Linear, Notion, Claude, Codex, PostHog')
+p('<b>Development:</b> JavaScript, TypeScript, React, Redux, TanStack Start, React Query, Next.js, Remix, Radix UI, Tailwind, GraphQL, Node.js, Express, PostgreSQL, OAuth, Jest, Cypress<br/><b>AI &amp; Agents:</b> LLM APIs, tool calling, MCP servers, LangChain, LangSmith, Promptfoo, Latitude, Laminar<br/><b>Cloud:</b> Cloudflare Workers, KV, Queues, Workers AI, Durable Objects, Observability, AI Gateway, Workflows, Agents, WebSockets, Docker<br/><b>Tools:</b> Figma, Cursor, Linear, Notion, Claude, Codex, PostHog')
 section('EDUCATION')
 flow.append(LabelDate('KIIT University', 'August 2021 - August 2024'))
 p('Bachelor of Science in Computer Science', 'job-role')
@@ -128,7 +129,7 @@ doc.build(flow, canvasmaker=resume_canvas)
 reader = PdfReader(out)
 assert len(reader.pages) == 1, f"Unexpected pages: {len(reader.pages)}"
 text = reader.pages[0].extract_text()
-required = ["PROFESSIONAL EXPERIENCE", "SlidesAI.io", "Fullstack Engineer", "drip campaigns", "9AI.in", "PROJECTS", "Agent Comics", "MCP server", "Email Classifier", "TECHNICAL SKILLS", "EDUCATION", "KIIT University"]
+required = ["LLM agents and integrations", "19K+", "customers", "PROFESSIONAL EXPERIENCE", "SlidesAI.io", "Fullstack Engineer", "drip campaigns", "9AI.in", "PROJECTS", "Agent Comics", "MCP server", "Email Classifier", "TECHNICAL SKILLS", "EDUCATION", "KIIT University"]
 for phrase in required:
     assert phrase in text, f"Missing resume text: {phrase}"
 positions = [text.index(heading) for heading in ["PROFESSIONAL EXPERIENCE", "PROJECTS", "TECHNICAL SKILLS", "EDUCATION"]]
