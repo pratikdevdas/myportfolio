@@ -24,14 +24,14 @@ pdfmetrics.registerFontFamily("ResumeSans", normal="ResumeSans", bold="ResumeSan
 INK = HexColor("#111111")
 MUTED = HexColor("#333333")
 styles = {
-    "name": ParagraphStyle("name", fontName="ResumeSans-Bold", fontSize=23, leading=27, alignment=1, spaceAfter=3),
+    "name": ParagraphStyle("name", fontName="ResumeSans-Bold", fontSize=22, leading=25, alignment=1, spaceAfter=3),
     "role": ParagraphStyle("role", fontName="ResumeSans", fontSize=10.5, leading=14, alignment=1, spaceAfter=5),
     "contact": ParagraphStyle("contact", fontName="ResumeSans", fontSize=9, leading=12.5, alignment=1, spaceAfter=2),
     "section": ParagraphStyle("section", fontName="ResumeSans-Bold", fontSize=11, leading=14, spaceAfter=3, keepWithNext=True),
-    "title": ParagraphStyle("title", fontName="ResumeSans-Bold", fontSize=10.5, leading=14, spaceAfter=4, keepWithNext=True),
-    "job-role": ParagraphStyle("job-role", fontName="ResumeSans-Italic", fontSize=10, leading=13, spaceAfter=5, keepWithNext=True),
-    "body": ParagraphStyle("body", fontName="ResumeSans", fontSize=10, leading=13.2, spaceAfter=4),
-    "bullet": ParagraphStyle("bullet", fontName="ResumeSans", fontSize=10, leading=13.2, spaceAfter=4, leftIndent=10, firstLineIndent=0, bulletIndent=0, bulletFontName="ResumeSans", bulletFontSize=9),
+    "title": ParagraphStyle("title", fontName="ResumeSans-Bold", fontSize=10.2, leading=13, spaceAfter=3, keepWithNext=True),
+    "job-role": ParagraphStyle("job-role", fontName="ResumeSans-Italic", fontSize=9.8, leading=12.5, spaceAfter=3, keepWithNext=True),
+    "body": ParagraphStyle("body", fontName="ResumeSans", fontSize=9.4, leading=11.6, spaceAfter=2.2),
+    "bullet": ParagraphStyle("bullet", fontName="ResumeSans", fontSize=9.4, leading=11.6, spaceAfter=2.2, leftIndent=10, firstLineIndent=0, bulletIndent=0, bulletFontName="ResumeSans", bulletFontSize=9),
 }
 for style in styles.values():
     style.textColor = INK
@@ -70,9 +70,9 @@ def p(text, style="body"):
 
 
 def section(label):
-    flow.append(Spacer(1, 10))
+    flow.append(Spacer(1, 6))
     p(label, "section")
-    rule = HRFlowable(width="100%", thickness=0.5, color=INK, spaceAfter=7)
+    rule = HRFlowable(width="100%", thickness=0.5, color=INK, spaceAfter=5)
     rule.keepWithNext = True
     flow.append(rule)
 
@@ -87,30 +87,32 @@ def link(url, label):
 
 
 p('Pratik Dev Das','name')
-p(link('mailto:dasdev.pratik@gmail.com','dasdev.pratik@gmail.com')+' | +91 7979901261<br/>'+link('https://www.pratikdevdas.com','pratikdevdas.com')+' | '+link('https://github.com/pratikdevdas','github.com/pratikdevdas')+' | '+link('https://www.linkedin.com/in/pratikdevdas/','LinkedIn'),'contact')
+p(link('mailto:dasdev.pratik@gmail.com','dasdev.pratik@gmail.com')+' | +91 7979901261<br/>'+link('https://www.pratikdevdas.com','pratikdevdas.com')+' | '+link('https://github.com/pratikdevdas','github.com/pratikdevdas')+' | '+link('https://www.linkedin.com/in/pratikdevdas/','linkedin.com/in/pratikdevdas'),'contact')
 section('PROFESSIONAL EXPERIENCE')
 employment('SlidesAI.io', 'Fullstack Engineer', 'June 2024 - Present')
-p('- Contributed extensively to agentic presentation chat UX and implemented the credit system.','bullet')
-p('- Launched an AI-powered PowerPoint add-in that creates presentations from topics, scripts and websites; ranked second among AI-powered add-ins in Microsoft Marketplace within two weeks.','bullet')
-p('- Evaluated workflows across 2M+ presentations using prompt iteration and Promptfoo, improving positive user feedback to 18-20% over two months.','bullet')
-p('- Rebuilt request handling with Cloudflare Queues, Durable Objects and WebSockets, reducing server overhead by 50% and delivering real-time status updates.','bullet')
-p('- Implemented analytics-driven drip campaigns and user-requested features for a Google Slides add-on with 15M+ downloads.','bullet')
-p('- Built Interactico for live Google Meet polls and quizzes (13K+ downloads), with subscription billing, analytics and user feedback flows.','bullet')
-p('- Built a WordPress/GraphQL/Next.js CMS with Cloudflare KV, cutting build time for 170 blog pages from 17 to 3 minutes. Shipped features and production fixes in Linear-managed sprints.','bullet')
+p('- Built key features of our agentic presentation chat, including research, artifacts and template suggestions.','bullet')
+p('- Built its credit system. When users run out of credits, the agent tells them in the chat and nudges them to buy more, which lifted payments by 22%.','bullet')
+p('- Rebuilt the presentation generation flow on Cloudflare Queues, Durable Objects and WebSockets. Agentic generation takes a while, so users now see live progress as it runs, and server overhead dropped by 50%.','bullet')
+p('- Launched an AI PowerPoint add-in that makes presentations from a topic, script or website. It hit #2 among AI add-ins on the Microsoft Marketplace within two weeks.','bullet')
+p('- Evaluated LLM workflows across 2M+ presentations with Promptfoo, LangSmith, Latitude and Laminar, raising positive feedback to 18-20% in two months.','bullet')
+p('- Shipped features and drip campaigns based on user requests and analytics for a Google Slides add-on with 15M+ downloads.','bullet')
+p('- Built Interactico, a live polls and quizzes tool for Google Meet with 13K+ downloads, including subscription billing and analytics.','bullet')
+p('- Built a WordPress, GraphQL and Next.js CMS on Cloudflare KV that cut build time for 170 blog pages from 17 to 3 minutes.','bullet')
 flow.append(Spacer(1,4))
 employment('9AI.in', 'Frontend Engineer Intern', 'March 2024 - May 2024')
-p('- Shipped a React/TanStack Query frontend and UI architecture for an AI-powered lip-sync app.', 'bullet')
+p('- Built the React and TanStack Query frontend for an AI lip-sync app.', 'bullet')
 section('PROJECTS')
 p('Agent Comics / Comic Studio | '+link('https://agentcomics.com','Website')+' | '+link('https://apps.apple.com/us/app/comic-studio-ai-comic-maker/id6799505824','App Store'),'title')
-p('Created an AI comic-making product for iPhone and iPad with guided story planning, character references, full-page artwork generation and downloadable pages.')
-flow.append(Spacer(1,4))
-p('Garden Home | '+link('https://www.pratikdevdas.com/projects/garden-home','Project overview'),'title')
-p('Created an AI-driven architectural visualization project exploring residential interiors, materials and lighting through still images and walkthroughs.')
+p('- Launched the Agent Comics MCP server, so people can make comics from start to finish inside ChatGPT, Claude and Codex. It gives the AI 12 tools to create characters, write page prompts, save pages and publish.','bullet')
+p('- It runs on Cloudflare Workers with OAuth 2.1 sign-in. Every change an agent makes is saved as a Durable Object version, so any edit can be rolled back.','bullet')
+p("- Built the comic agent behind the Comic Studio app for iPhone, iPad and web, live on the App Store. It takes a story idea through storyboarding, prompts, character sheets and finished pages, pausing for the user's review along the way.",'bullet')
 flow.append(Spacer(1,4))
 p('Email Classifier | '+link('https://www.pratikdevdas.com/projects/emailClassify','Project overview'),'title')
-p('Built Gmail categorization using OAuth, GPT-4o mini and LangChain prompt chaining, with LangSmith observability and a Figma-designed Tailwind interface.')
+p('- A Gmail agent that sorts email into categories, using OAuth, GPT-4o mini and LangChain, with LangSmith tracing.','bullet')
+flow.append(Spacer(1,4))
+p('More projects at '+link('https://www.pratikdevdas.com','pratikdevdas.com'),'title')
 section('TECHNICAL SKILLS')
-p('<b>Development:</b> JavaScript, TypeScript, React, Redux, TanStack Start, React Query, Next.js, Remix, Radix UI, Tailwind, GraphQL, Node.js, Express, PostgreSQL, OAuth, Jest, Cypress<br/><b>AI &amp; Cloud:</b> LangChain, LangSmith, Promptfoo; Cloudflare Workers, KV, Queues, Workers AI, Durable Objects, Observability, AI Gateway, Workflows, Agents; WebSockets, Docker<br/><b>Tools:</b> Figma, Cursor, Linear, Notion, Claude')
+p('<b>Development:</b> JavaScript, TypeScript, React, Redux, TanStack Start, React Query, Next.js, Remix, Radix UI, Tailwind, GraphQL, Node.js, Express, PostgreSQL, OAuth, Jest, Cypress<br/><b>AI &amp; Agents:</b> LLM APIs, tool calling, MCP servers, LangChain, LangSmith, Promptfoo, Latitude, Laminar<br/><b>Cloud:</b> Cloudflare Workers, KV, Queues, Workers AI, Durable Objects, Observability, AI Gateway, Workflows, Agents; WebSockets, Docker<br/><b>Tools:</b> Figma, Cursor, Linear, Notion, Claude, Codex, PostHog')
 section('EDUCATION')
 flow.append(LabelDate('KIIT University', 'August 2021 - August 2024'))
 p('Bachelor of Science in Computer Science', 'job-role')
@@ -126,7 +128,7 @@ doc.build(flow, canvasmaker=resume_canvas)
 reader = PdfReader(out)
 assert len(reader.pages) == 1, f"Unexpected pages: {len(reader.pages)}"
 text = reader.pages[0].extract_text()
-required = ["PROFESSIONAL EXPERIENCE", "SlidesAI.io", "Fullstack Engineer", "drip campaigns", "9AI.in", "PROJECTS", "Agent Comics", "Garden Home", "AI-driven", "Email Classifier", "TECHNICAL SKILLS", "EDUCATION", "KIIT University"]
+required = ["PROFESSIONAL EXPERIENCE", "SlidesAI.io", "Fullstack Engineer", "drip campaigns", "9AI.in", "PROJECTS", "Agent Comics", "MCP server", "Email Classifier", "TECHNICAL SKILLS", "EDUCATION", "KIIT University"]
 for phrase in required:
     assert phrase in text, f"Missing resume text: {phrase}"
 positions = [text.index(heading) for heading in ["PROFESSIONAL EXPERIENCE", "PROJECTS", "TECHNICAL SKILLS", "EDUCATION"]]
