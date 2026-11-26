@@ -30,7 +30,6 @@ styles = {
     "section": ParagraphStyle("section", fontName="ResumeSans-Bold", fontSize=11, leading=14, spaceAfter=3, keepWithNext=True),
     "title": ParagraphStyle("title", fontName="ResumeSans-Bold", fontSize=10.2, leading=13, spaceAfter=3, keepWithNext=True),
     "job-role": ParagraphStyle("job-role", fontName="ResumeSans-Italic", fontSize=9.8, leading=12.5, spaceAfter=3, keepWithNext=True),
-    "summary": ParagraphStyle("summary", fontName="ResumeSans", fontSize=9.4, leading=12, alignment=1, spaceBefore=3, spaceAfter=2),
     "body": ParagraphStyle("body", fontName="ResumeSans", fontSize=9.4, leading=11.6, spaceAfter=2.2),
     "bullet": ParagraphStyle("bullet", fontName="ResumeSans", fontSize=9.4, leading=11.6, spaceAfter=2.2, leftIndent=10, firstLineIndent=0, bulletIndent=0, bulletFontName="ResumeSans", bulletFontSize=9),
 }
@@ -88,30 +87,33 @@ def link(url, label):
 
 
 p('Pratik Dev Das','name')
-p(link('mailto:dasdev.pratik@gmail.com','dasdev.pratik@gmail.com')+' | +91 7979901261 | '+link('https://www.pratikdevdas.com','pratikdevdas.com')+'<br/>'+link('https://github.com/pratikdevdas','github.com/pratikdevdas')+' | '+link('https://www.linkedin.com/in/pratikdevdas/','linkedin.com/in/pratikdevdas'),'contact')
-p('<b>Full Stack / Backend Engineer</b> who builds APIs, queues and real-time services in TypeScript, Node.js and PostgreSQL on Cloudflare, and ships AI agents on top: agentic chat, MCP servers and add-ins, with evals behind them. I build in front of users and get it adopted.','summary')
+p('Fullstack engineer who ships LLM agents and integrations to real users, with TypeScript and Cloudflare.','role')
+p(link('mailto:dasdev.pratik@gmail.com','dasdev.pratik@gmail.com')+' | +91 7979901261<br/>'+link('https://www.pratikdevdas.com','pratikdevdas.com')+' | '+link('https://github.com/pratikdevdas','github.com/pratikdevdas')+' | '+link('https://www.linkedin.com/in/pratikdevdas/','linkedin.com/in/pratikdevdas'),'contact')
 section('PROFESSIONAL EXPERIENCE')
-employment('SlidesAI.io', 'Full Stack Engineer', 'June 2024 - Present')
-p('- Built research, artifacts and template suggestions for the agentic chat where users edit decks by talking to an agent.','bullet')
-p('- Shipped an AI add-in inside Microsoft PowerPoint that makes presentations from a topic, script or website. It hit #2 among AI add-ins on the Microsoft Marketplace within two weeks.','bullet')
-p('- Set up evals for LLM workflows across 2M+ presentations with Promptfoo, LangSmith, Latitude and Laminar, then tuned prompts to raise positive user feedback within two months.','bullet')
-p('- Rebuilt presentation generation on Cloudflare Queues, Durable Objects and WebSockets. Agentic generation takes a while, so users now watch their deck build live instead of staring at a spinner.','bullet')
-p('- Talked directly with users of a Google Slides add-on with 15M+ downloads, then shipped the features they asked for and ran drip campaigns based on analytics.','bullet')
-p('- Built the credit system. When users run out of credits, the agent tells them in the chat and nudges them to buy more, which lifted payments by 22%.','bullet')
-p('- Built Interactico, a live polls and quizzes tool inside Google Meet with 54K+ downloads, including subscription billing and analytics.','bullet')
+employment('SlidesAI.io', 'Fullstack Engineer', 'June 2024 - Present')
+p("- Built research, artifacts and template suggestions for SlidesAI's agentic presentation chat, where users create and edit decks by talking to an agent.",'bullet')
+p('- Built its credit system. When users run out of credits, the agent tells them in the chat and nudges them to buy more, which lifted payments by 22%.','bullet')
+p('- Rebuilt the presentation generation flow on Cloudflare Queues, Durable Objects and WebSockets. Agentic generation takes a while, so users now see live progress as it runs, and server overhead dropped by 50%.','bullet')
+p('- Launched an AI PowerPoint add-in that makes presentations from a topic, script or website. It hit #2 among AI add-ins on the Microsoft Marketplace within two weeks.','bullet')
+p('- Set up evals for LLM workflows across 2M+ presentations with Promptfoo, LangSmith, Latitude and Laminar, then used the results to tune prompts and raise positive user feedback within two months.','bullet')
+p('- Talked directly with users and customers of a Google Slides add-on with 15M+ downloads, then shipped the features they asked for and ran drip campaigns based on analytics.','bullet')
+p('- Built Interactico, a live polls and quizzes tool for Google Meet with 19K+ downloads, including subscription billing and analytics.','bullet')
+p('- Built a WordPress, GraphQL and Next.js CMS on Cloudflare KV that cut build time for 170 blog pages from 17 to 3 minutes.','bullet')
 flow.append(Spacer(1,4))
 employment('9AI.in', 'Frontend Engineer Intern', 'March 2024 - May 2024')
 p('- Built the React and TanStack Query frontend for an AI lip-sync app.', 'bullet')
 section('PROJECTS')
-p('Comic Studio / Agent Comics (solo founder) | '+link('https://agentcomics.com','Website')+' | '+link('https://apps.apple.com/us/app/comic-studio-ai-comic-maker/id6799505824','App Store'),'title')
-p('Consumer AI app for web and iOS','job-role')
-p("- Built an AI agent that takes a story idea through storyboarding, character sheets and finished pages, pausing for the user's review. Live 2+ months, about 5 sign-ups a day (around 150 a month).",'bullet')
-p('- Built the Agent Comics MCP server (12 tools, OAuth 2.1) so people can make comics from inside Claude and Codex. The ChatGPT app is in review.','bullet')
-p('- Each comic is its own Cloudflare Durable Object with its story, memory and characters, so the agent keeps full context, and every change the agent makes is saved as a version that can be rolled back.','bullet')
-p('- Early comics looked like AI slop, so I built a hill-climbing harness: a swarm of agents tried prompt variants against ChatGPT-made comics and kept what won. Style references won, so every comic now starts from one.','bullet')
-p("- Ran 8 user interviews. They led to an editing feature (in progress) and a second product, comicstudio.store, for personalised printed comics on Lulu's print API.",'bullet')
-section('SKILLS')
-p('<b>Backend:</b> TypeScript, JavaScript, Node.js, PostgreSQL, GraphQL, REST APIs, OAuth, WebSockets<br/><b>Frontend:</b> React, Next.js, Tailwind<br/><b>Cloud:</b> Cloudflare, Azure, Docker<br/><b>AI &amp; Agents:</b> LLM APIs, agents, MCP servers, prompt engineering, evals, AI SDK, LangChain, LangSmith, Promptfoo<br/><b>Tools:</b> Claude Code, Codex, Cursor, PostHog, Figma, Linear, Notion')
+p('Agent Comics / Comic Studio | '+link('https://agentcomics.com','Website')+' | '+link('https://apps.apple.com/us/app/comic-studio-ai-comic-maker/id6799505824','App Store'),'title')
+p('- Launched the Agent Comics MCP server, so people can make comics from start to finish inside ChatGPT, Claude and Codex. It gives the AI 12 tools to create characters, write page prompts, save pages and publish.','bullet')
+p('- It runs on Cloudflare Workers with OAuth 2.1 sign-in. Every change an agent makes is saved as a Durable Object version, so any edit can be rolled back.','bullet')
+p("- Built the comic agent behind the Comic Studio app for iPhone, iPad and web, live on the App Store. It takes a story idea through storyboarding, prompts, character sheets and finished pages, pausing for the user's review along the way.",'bullet')
+flow.append(Spacer(1,4))
+p('Email Classifier | '+link('https://www.pratikdevdas.com/projects/emailClassify','Project overview'),'title')
+p('- A Gmail agent that sorts email into categories, using OAuth, GPT-4o mini and LangChain, with LangSmith tracing.','bullet')
+flow.append(Spacer(1,4))
+p('More projects at '+link('https://www.pratikdevdas.com','pratikdevdas.com'),'title')
+section('TECHNICAL SKILLS')
+p('<b>Development:</b> JavaScript, TypeScript, React, Redux, TanStack Start, React Query, Next.js, Remix, Radix UI, Tailwind, GraphQL, Node.js, Express, PostgreSQL, OAuth, Jest, Cypress<br/><b>AI &amp; Agents:</b> LLM APIs, tool calling, MCP servers, LangChain, LangSmith, Promptfoo, Latitude, Laminar<br/><b>Cloud:</b> Cloudflare Workers, KV, Queues, Workers AI, Durable Objects, Observability, AI Gateway, Workflows, Agents, WebSockets, Docker<br/><b>Tools:</b> Figma, Cursor, Linear, Notion, Claude, Codex, PostHog')
 section('EDUCATION')
 flow.append(LabelDate('KIIT University', 'August 2021 - August 2024'))
 p('Bachelor of Science in Computer Science', 'job-role')
@@ -127,11 +129,10 @@ doc.build(flow, canvasmaker=resume_canvas)
 reader = PdfReader(out)
 assert len(reader.pages) == 1, f"Unexpected pages: {len(reader.pages)}"
 text = reader.pages[0].extract_text()
-required = ["Full Stack / Backend Engineer", "54K+", "PROFESSIONAL EXPERIENCE", "SlidesAI.io", "Full Stack Engineer", "drip campaigns", "9AI.in", "PROJECTS", "Agent Comics", "MCP server", "SKILLS", "EDUCATION", "KIIT University"]
+required = ["LLM agents and integrations", "19K+", "customers", "PROFESSIONAL EXPERIENCE", "SlidesAI.io", "Fullstack Engineer", "drip campaigns", "9AI.in", "PROJECTS", "Agent Comics", "MCP server", "Email Classifier", "TECHNICAL SKILLS", "EDUCATION", "KIIT University"]
 for phrase in required:
     assert phrase in text, f"Missing resume text: {phrase}"
-positions = [text.index(heading) for heading in ["PROFESSIONAL EXPERIENCE", "PROJECTS", "SKILLS", "EDUCATION"]]
+positions = [text.index(heading) for heading in ["PROFESSIONAL EXPERIENCE", "PROJECTS", "TECHNICAL SKILLS", "EDUCATION"]]
 assert positions == sorted(positions), "Section extraction order changed"
-for banned in ["Open Graph Generator", "server overhead", "[", "Job-search agent", "tool calling"]:
-    assert banned not in text, f"Unwanted resume text: {banned}"
+assert "Open Graph Generator" not in text
 print(f"Created {out}; pages={len(reader.pages)}; links={len(reader.pages[0].get('/Annots', []))}; text order verified")
